@@ -1,0 +1,42 @@
+.header {
+  background-image: url("./assets/header.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: 10px 0;
+}
+
+label input {
+  background: #fff;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 48px;
+  padding: 15px 15px;
+  border-radius: 3px;
+  outline: none;
+  color: #062e39;
+  margin-top: 10px;
+}
+
+.blog-item:hover .blog-social {
+  opacity: 1;
+}
