@@ -1,11 +1,13 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import Instagram from "../assets/Instagram";
+import { useTranslation } from "react-i18next";
 
 function Blog() {
+  const { t } = useTranslation();
   return (
     <Box p={"36px 0"}>
       <Box className="container">
-        <Heading {...css.title}>Our Delivery Team</Heading>
+        <Heading {...css.title}>{t("Our Delivery Team")}</Heading>
         <SimpleGrid columns={3} gap={"24px"} mt={"36px"}>
           <Box className="blog-item" {...css.box}>
             <Box {...css.top}>

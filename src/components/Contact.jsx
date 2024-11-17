@@ -11,8 +11,10 @@ import ContactImage from "../assets/contact.jpg";
 import OneIcon from "../assets/11.svg";
 import TwoIcon from "../assets/22.svg";
 import ThreeIcon from "../assets/1.svg";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
   return (
     <Box {...css.contact}>
       <Box className="container">
@@ -30,34 +32,34 @@ function Contact() {
             <Flex align={"center"} gap={"12px"}>
               <Flex {...css.item}>
                 <Image {...css.image} src={OneIcon} alt="OneIcon" />
-                <Heading {...css.subname}>Optimized Cost</Heading>
+                <Heading {...css.subname}>{t("Optimized Cost")}</Heading>
               </Flex>
               <Flex {...css.item}>
                 <Image {...css.image} src={TwoIcon} alt="TwoIcon" />
-                <Heading {...css.subname}>Delivery on Time</Heading>
+                <Heading {...css.subname}>{t("Delivery on Time")}</Heading>
               </Flex>
               <Flex {...css.item}>
                 <Image {...css.image} src={ThreeIcon} alt="ThreeIcon" />
-                <Heading {...css.subname}>Delivery on Time</Heading>
+                <Heading {...css.subname}>{t("Delivery on Time")}</Heading>
               </Flex>
             </Flex>
           </Box>
           <Box {...css.right}>
-            <Heading {...css.name}>Request a Quote</Heading>
+            <Heading {...css.name}>{t("Request a Quote")}</Heading>
             <label htmlFor="name">
-              Your Name:
-              <input type="text" id="name" placeholder="Name" />
+              {t("Your Name")}:
+              <input type="text" id="name" placeholder={t("Your Name")} />
             </label>
             <label htmlFor="email">
-              Your email:
-              <input type="email" id="email" placeholder="Email" />
+              {t("Your Email")}:
+              <input type="email" id="email" placeholder={t("Your Email")} />
             </label>
             <label htmlFor="phone">
-              Your Phone:
-              <input type="tell" id="phone" placeholder="Phone" />
+              {t("Your Phone")}:
+              <input type="tell" id="phone" placeholder={t("Your Phone")} />
             </label>
             <Button type="submit" {...css.button}>
-              Submit
+              {t("Submit")}
             </Button>
           </Box>
         </SimpleGrid>

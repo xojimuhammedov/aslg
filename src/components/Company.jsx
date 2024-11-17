@@ -1,25 +1,29 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 function Company() {
+  const { t } = useTranslation();
   return (
     <Box p={"120px 0"}>
       <Box className="container">
         <Flex>
           <Box w={"50%"}>
-            <Heading {...css.title}>Transportation Company</Heading>
+            <Heading {...css.title}>{t("Transportation Company")}</Heading>
             <Heading {...css.name}>
-              We Provide Full Range Global Logistics
+              {t("We are the Future of Cargo & Logistics")}
             </Heading>
             <Text {...css.text}>
               Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a
               lobortis lectus, id volutpat magna. Morbi consequat porttitor
               fermentum. Nulla vestibulum tincidunt viverra. Vestibulum accumsan
             </Text>
-            <Heading {...css.serviceName}>Worldwide Service</Heading>
+            <Heading {...css.serviceName}>{t("Worldwide Service")}</Heading>
             <Text {...css.texts}>
               Lorem ipsum is simply velit anod ipas aliquet enean quis.
             </Text>
-            <Heading {...css.serviceName}>Certified & Awward Winner</Heading>
+            <Heading {...css.serviceName}>
+              {t("Certified & Awward Winner")}
+            </Heading>
             <Text {...css.texts}>
               Lorem ipsum is simply velit anod ipas aliquet enean quis.
             </Text>

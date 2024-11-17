@@ -8,12 +8,14 @@ import Twitter from "../assets/twitter-new.svg";
 import LocationIcon from "../assets/location.svg";
 import EmailIcon from "../assets/mail-open.svg";
 import CallIcon from "../assets/call.svg";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
   return (
     <Box {...css.footer}>
       <Box className="container">
-        <Flex gap={'60px'} align={"center"} justify={"space-between"}>
+        <Flex gap={"60px"} align={"center"} justify={"space-between"}>
           <Box {...css.left}>
             <Image
               {...css.image}
@@ -45,9 +47,9 @@ function Footer() {
               </Link>
             </Flex>
           </Box>
-          <Flex width={'100%'} justifyContent={'space-between'}>
+          <Flex width={"100%"} justifyContent={"space-between"}>
             <Box position={"relative"} zIndex={"3"}>
-              <Heading {...css.title}>Our Services</Heading>
+              <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
                   Home
@@ -87,7 +89,7 @@ function Footer() {
               </Flex>
             </Box>
             <Box position={"relative"} zIndex={"3"}>
-              <Heading {...css.title}>Contact Info</Heading>
+              <Heading {...css.title}>{t("Contact Info")}</Heading>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
                   <Image src={LocationIcon} alt="Location" />

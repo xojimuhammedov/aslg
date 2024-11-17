@@ -1,21 +1,24 @@
 import { Box, Heading, Link, Text } from "@chakra-ui/react";
 import Navbar from "./Navbar";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
   return (
     <Box className="header">
       <Navbar />
       <Box className="container">
         <Box {...css.top}>
           <Heading {...css.title}>
-            Flexible Transport And Logistics Services
+            {t("Flexible Transport And Logistics Services")}
           </Heading>
           <Text {...css.text}>
-            Explain to you how all this mistaken denouncing pleasure and
-            praising pain was born and we will give you
+            {t(
+              "Explain to you how all this mistaken denouncing pleasure and praising pain was born and we will give you"
+            )}
           </Text>
           <Link href="/services" {...css.link}>
-            Read More
+            {t("Read More")}
           </Link>
         </Box>
       </Box>
