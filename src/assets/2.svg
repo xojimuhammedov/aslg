@@ -1,21 +1,16 @@
-<svg width="157" height="156" viewBox="0 0 157 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M99.5156 22H113.016" stroke="#fff" stroke-width="4"/>
-<path d="M20.5156 46L24.5156 51L39.5156 33" stroke="#fff" stroke-width="4"/>
-<path d="M21.0156 76L25.0156 81L40.0156 63" stroke="#fff" stroke-width="4"/>
-<path d="M22.0156 117V98.5H47.5156V117H22.0156Z" stroke="#fff" stroke-width="4"/>
-<path d="M57.5156 97.5H69.5156" stroke="#fff" stroke-width="4"/>
-<path d="M58.0156 108H70.0156" stroke="#fff" stroke-width="4"/>
-<path d="M58.5156 118.5H70.5156" stroke="#fff" stroke-width="4"/>
-<path d="M2.51562 18.5V130C3.18229 133 5.91563 139 11.5156 139H78.5156V144H89.0156H128.016H150.516L154.516 139V114.5L144.016 105H136.016M128.016 105V130H81.5156V97.5H95.0156V105H114.016L111.516 95.5H125.016L128.016 105ZM128.016 105H136.016M136.016 105V43" stroke="#fff" stroke-width="4"/>
-<path d="M123.516 25.5L128.016 31.5L139.516 18" stroke="#fff" stroke-width="4"/>
-<path d="M2.01599 20.0002C1.84932 16.3335 2.91599 8.90016 8.51599 8.50016C14.116 8.10016 23.5157 8.33349 27.5156 8.50016M27.5156 8.50016V2H71.0156V5.5H74.0156M27.5156 8.50016V20.0002M78.5156 94.5H99.5156V20.0002C100.316 10.8003 93.5156 6.5001 90.0156 5.5H74.0156M78.5156 94.5H124.516M78.5156 94.5V128H13.5156V20.0002H27.5156M27.5156 20.0002L32.5156 26H71.0156L74.0156 20.0002M74.0156 20.0002V5.5M74.0156 20.0002H86.5156V90" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 34.5H78.0156" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 45H78.0156" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 55.5H78.0156" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 66H78.0156" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 76.5H78.0156" stroke="#fff" stroke-width="4"/>
-<path d="M48.0156 87H78.0156" stroke="#fff" stroke-width="4"/>
-<circle cx="132.516" cy="22.5" r="20.5" stroke="#fff" stroke-width="4"/>
-<path d="M104.016 146C104.016 150.327 100.303 154 95.5156 154C90.7281 154 87.0156 150.327 87.0156 146C87.0156 141.673 90.7281 138 95.5156 138C100.303 138 104.016 141.673 104.016 146Z" stroke="#fff" stroke-width="4"/>
-<path d="M143.016 146C143.016 150.327 139.303 154 134.516 154C129.728 154 126.016 150.327 126.016 146C126.016 141.673 129.728 138 134.516 138C139.303 138 143.016 141.673 143.016 146Z" stroke="#fff" stroke-width="4"/>
+<svg width="83" height="58" viewBox="0 0 83 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 36H49V6" stroke="black" stroke-width="1.5"/>
+<path d="M54 31.5V12H64L76 23V31.5H54Z" stroke="black" stroke-width="1.5"/>
+<path d="M14.5 8H38.5" stroke="black" stroke-width="1.5"/>
+<path d="M16 18H40" stroke="black" stroke-width="1.5"/>
+<path d="M13 28H37" stroke="black" stroke-width="1.5"/>
+<path d="M25 49.5H58" stroke="black"/>
+<path d="M73.5 49.5H82V22.5L66 6.5H49V1H1.5" stroke="black" stroke-width="1.5"/>
+<path d="M1.5 0.5V49.5H9.5" stroke="black" stroke-width="1.5"/>
+<circle cx="17.5" cy="49.5" r="7.75" stroke="black" stroke-width="1.5"/>
+<circle cx="17.5" cy="49.5" r="7.75" stroke="black" stroke-width="1.5"/>
+<circle cx="65.5" cy="49.5" r="7.75" stroke="black" stroke-width="1.5"/>
+<circle cx="17.5" cy="49.5" r="3.75" fill="black" stroke="black" stroke-width="1.5"/>
+<circle cx="17.5" cy="49.5" r="3.75" fill="black" stroke="black" stroke-width="1.5"/>
+<circle cx="65.5" cy="49.5" r="3.75" fill="black" stroke="black" stroke-width="1.5"/>
 </svg>

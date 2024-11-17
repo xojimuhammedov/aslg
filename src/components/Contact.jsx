@@ -8,8 +8,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import ContactImage from "../assets/contact.jpg";
-import OneIcon from "../assets/1.svg";
-import TwoIcon from "../assets/2.svg";
+import OneIcon from "../assets/11.svg";
+import TwoIcon from "../assets/22.svg";
+import ThreeIcon from "../assets/1.svg";
 
 function Contact() {
   return (
@@ -33,6 +34,10 @@ function Contact() {
               </Flex>
               <Flex {...css.item}>
                 <Image {...css.image} src={TwoIcon} alt="TwoIcon" />
+                <Heading {...css.subname}>Delivery on Time</Heading>
+              </Flex>
+              <Flex {...css.item}>
+                <Image {...css.image} src={ThreeIcon} alt="ThreeIcon" />
                 <Heading {...css.subname}>Delivery on Time</Heading>
               </Flex>
             </Flex>
