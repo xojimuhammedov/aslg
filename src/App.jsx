@@ -1,5 +1,6 @@
 import "./App.css";
 import Blog from "./components/Blog";
+import Company from "./components/Company";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -12,6 +13,7 @@ function App() {
     <>
       <Header />
       <Services />
+      <Company />
       <Contact />
       <Blog />
       <Location />
