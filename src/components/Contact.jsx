@@ -1,5 +1,15 @@
-import { Box, Button, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import ContactImage from "../assets/contact.jpg";
+import OneIcon from "../assets/1.svg";
+import TwoIcon from "../assets/2.svg";
 
 function Contact() {
   return (
@@ -16,6 +26,16 @@ function Contact() {
                 a lobortis lectus, id volutpat magna. Morbi consequat porttitor
               </Text>
             </Box>
+            <Flex align={"center"} gap={"12px"}>
+              <Flex {...css.item}>
+                <Image {...css.image} src={OneIcon} alt="OneIcon" />
+                <Heading {...css.subname}>Optimized Cost</Heading>
+              </Flex>
+              <Flex {...css.item}>
+                <Image {...css.image} src={TwoIcon} alt="TwoIcon" />
+                <Heading {...css.subname}>Delivery on Time</Heading>
+              </Flex>
+            </Flex>
           </Box>
           <Box {...css.right}>
             <Heading {...css.name}>Request a Quote</Heading>
@@ -106,5 +126,27 @@ const css = {
     fontWeight: "500",
     marginTop: "30px",
     transition: "all 0.3s",
+  },
+  item: {
+    alignItems: "center",
+    marginBottom: "20px",
+    flexDirection: "column",
+    borderRadius: "2px",
+    padding: "25px 35px",
+    maxWidth: "200px",
+    backgroundColor: "#062E39",
+    width: "100%",
+  },
+  image: {
+    width: "50px",
+    height: "50px",
+    objectFit: "contain",
+  },
+  subname: {
+    color: "#fff",
+    fontSize: "20px",
+    fontWeight: "700",
+    marginTop: "15px",
+    textAlign: "center",
   },
 };

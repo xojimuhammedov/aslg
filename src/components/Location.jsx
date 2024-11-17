@@ -4,13 +4,14 @@ import {
   AccordionItemTrigger,
   AccordionRoot,
   Box,
+  Flex,
+  Link,
+  Image,
 } from "@chakra-ui/react";
 
-const items = [
-  { value: "a", title: "First Item", text: "Some value 1..." },
-  { value: "b", title: "Second Item", text: "Some value 2..." },
-  { value: "c", title: "Third Item", text: "Some value 3...", disabled: true },
-];
+import LocationIcon from "../assets/location.svg";
+import EmailIcon from "../assets/mail-open.svg";
+import CallIcon from "../assets/call.svg";
 
 function Location() {
   return (
@@ -24,20 +25,30 @@ function Location() {
         referrerPolicy="no-referrer-when-downgrade"></iframe>
       <Box {...css.content}>
         <AccordionRoot collapsible defaultValue={["b"]}>
-          {items.map((item, index) => (
-            <AccordionItem
-              key={index}
-              m={"15px 0"}
-              value={item.value}
-              disabled={item.disabled}>
-              <AccordionItemTrigger {...css.title}>
-                {item.title}
-              </AccordionItemTrigger>
-              <AccordionItemContent {...css.text}>
-                {item.text}
-              </AccordionItemContent>
-            </AccordionItem>
-          ))}
+          {/* {items.map((item, index) => ( */}
+          <AccordionItem
+            // key={index}
+            m={"15px 0"}
+            value={"a"}>
+            <AccordionItemTrigger {...css.title}>Location</AccordionItemTrigger>
+            <AccordionItemContent {...css.text}>
+              <Flex flexDirection={"column"}>
+                <Link {...css.link} href="/">
+                  <Image src={LocationIcon} alt="Location" />
+                  244, First Floor, Angeles
+                </Link>
+                <Link {...css.link} href="/about">
+                  <Image src={CallIcon} alt="Call" />
+                  (880)1247536548
+                </Link>
+                <Link {...css.link} href="/services">
+                  <Image src={EmailIcon} alt="Email" />
+                  info@example.com
+                </Link>
+              </Flex>
+            </AccordionItemContent>
+          </AccordionItem>
+          {/* ))} */}
         </AccordionRoot>
       </Box>
     </Box>
@@ -69,5 +80,12 @@ const css = {
     color: "#fff",
     fontSize: "16px",
     lineHeight: "24px",
+  },
+  link: {
+    color: "#fff",
+    lineHeight: "26px",
+    fontSize: "16px",
+    fontWeight: "500",
+    marginBottom: "20px",
   },
 };
