@@ -1,11 +1,12 @@
-import { Box, Heading, Link, Text } from "@chakra-ui/react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { t } = useTranslation();
   return (
-    <Box className="header">
+    <Box pb={'24px'} className="header">
       <Navbar />
       <Box className="container">
         <Box {...css.top}>
@@ -17,8 +18,8 @@ function Header() {
               "Explain to you how all this mistaken denouncing pleasure and praising pain was born and we will give you"
             )}
           </Text>
-          <Link href="/services" {...css.link}>
-            {t("Read More")}
+          <Link to={"/"}>
+            <Text {...css.link}>{t("Read More")}</Text>
           </Link>
         </Box>
       </Box>
@@ -56,6 +57,8 @@ const css = {
     fontWeight: "500",
     marginBottom: "30px",
     transition: "all 0.3s",
+    width: "180px",
+    textAlign: "center",
 
     _hover: {
       backgroundColor: "#fff",

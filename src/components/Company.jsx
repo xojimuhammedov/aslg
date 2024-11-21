@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { border, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Company() {
   const { t } = useTranslation();
@@ -10,23 +11,18 @@ function Company() {
           <Box w={"50%"}>
             <Heading {...css.title}>{t("Transportation Company")}</Heading>
             <Heading {...css.name}>
-              {t("We are the Future of Cargo & Logistics")}
+              {t("Добро пожаловать в Asilbek Sultanbek Logistics Group!")}
             </Heading>
             <Text {...css.text}>
-              Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla a
-              lobortis lectus, id volutpat magna. Morbi consequat porttitor
-              fermentum. Nulla vestibulum tincidunt viverra. Vestibulum accumsan
-            </Text>
-            <Heading {...css.serviceName}>{t("Worldwide Service")}</Heading>
-            <Text {...css.texts}>
-              Lorem ipsum is simply velit anod ipas aliquet enean quis.
-            </Text>
-            <Heading {...css.serviceName}>
-              {t("Certified & Awward Winner")}
-            </Heading>
-            <Text {...css.texts}>
-              Lorem ipsum is simply velit anod ipas aliquet enean quis.
-            </Text>
+              Мы — надежный партнер в мире логистики, специализирующийся на
+              предоставлении комплексных решений для вашего бизнеса. Компания
+              *Asilbek Sultanbek Logistics Group* предлагает полный спектр
+              логистических услуг, чтобы ваш груз всегда доставлялся вовремя,
+              безопасно и с минимальными затратами.
+            </Text> 
+            <Link to={"/"}>
+              <Text {...css.link}>{t("Read More")}</Text>
+            </Link>
           </Box>
           <Box {...css.right}>
             <Box {...css.box}>
@@ -61,9 +57,9 @@ const css = {
     marginTop: "20px",
   },
   name: {
-    fontSize: "55px",
+    fontSize: "50px",
     color: "#062e39",
-    lineHeight: "66px",
+    lineHeight: "55px",
     fontWeight: "700",
   },
   text: {
@@ -102,6 +98,25 @@ const css = {
   image: {
     position: "relative",
     zIndex: "3 !important",
+  },
+  link: {
+    backgroundColor: "#062e39",
+    color: "#fff",
+    padding: "15px 40px",
+    borderRadius: "5px",
+    fontSize: "16px",
+    fontWeight: "500",
+    marginBottom: "30px",
+    transition: "all 0.3s",
+    width: "180px",
+    textAlign: "center",
+    marginTop: "20px",
+    border: "2px solid #062e39",
+
+    _hover: {
+      backgroundColor: "#fff",
+      color: "#062e39",
+    },
   },
   images: {
     position: "relative",

@@ -40,7 +40,7 @@ function Contact() {
               </Flex>
               <Flex {...css.item}>
                 <Image {...css.image} src={ThreeIcon} alt="ThreeIcon" />
-                <Heading {...css.subname}>{t("Delivery on Time")}</Heading>
+                <Heading {...css.subname}>{t("Safety & Reliability")}</Heading>
               </Flex>
             </Flex>
           </Box>

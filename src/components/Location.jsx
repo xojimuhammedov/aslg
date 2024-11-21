@@ -1,8 +1,9 @@
 import {
+  Accordion,
   AccordionItem,
-  AccordionItemContent,
-  AccordionItemTrigger,
-  AccordionRoot,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
   Box,
   Flex,
   Link,
@@ -24,14 +25,10 @@ function Location() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
       <Box {...css.content}>
-        <AccordionRoot collapsible defaultValue={["b"]}>
-          {/* {items.map((item, index) => ( */}
-          <AccordionItem
-            // key={index}
-            m={"15px 0"}
-            value={"a"}>
-            <AccordionItemTrigger {...css.title}>Location</AccordionItemTrigger>
-            <AccordionItemContent {...css.text}>
+        <Accordion defaultValue={[0]}>
+          <AccordionItem m={"15px 0"} value={"a"}>
+            <AccordionButton {...css.title}>Location</AccordionButton>
+            <AccordionPanel {...css.text}>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
                   <Image src={LocationIcon} alt="Location" />
@@ -46,10 +43,9 @@ function Location() {
                   info@example.com
                 </Link>
               </Flex>
-            </AccordionItemContent>
+            </AccordionPanel>
           </AccordionItem>
-          {/* ))} */}
-        </AccordionRoot>
+        </Accordion>
       </Box>
     </Box>
   );
@@ -87,5 +83,8 @@ const css = {
     fontSize: "16px",
     fontWeight: "500",
     marginBottom: "20px",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
   },
 };

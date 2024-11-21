@@ -6,29 +6,25 @@ function Services() {
     <Box p={"36px 0"}>
       <Box className="container">
         <Heading {...css.title}>Logistic & Transport</Heading>
-        <SimpleGrid mt={'48px'} columns={3} gap={"24px"}>
+        <SimpleGrid mt={"48px"} columns={3} gap={"24px"}>
           <Box {...css.box}>
             <Box {...css.content}>
-              <Heading {...css.name}>Road Transport</Heading>
-              <Text {...css.text}>
-                Long established fact that reader will be distracted by the
-              </Text>
+              <Heading {...css.name}>Международные грузоперевозки</Heading>
             </Box>
           </Box>
           <Box {...css.box}>
             <Box {...css.content}>
-              <Heading {...css.name}>Road Transport</Heading>
-              <Text {...css.text}>
-                Long established fact that reader will be distracted by the
-              </Text>
+              <Heading {...css.name}>Складирование и обработка грузов</Heading>
             </Box>
           </Box>
           <Box {...css.box}>
             <Box {...css.content}>
-              <Heading {...css.name}>Road Transport</Heading>
-              <Text {...css.text}>
-                Long established fact that reader will be distracted by the
-              </Text>
+              <Heading {...css.name}>Таможенное оформление</Heading>
+            </Box>
+          </Box>
+          <Box {...css.box}>
+            <Box {...css.content}>
+              <Heading {...css.name}>Логистический консалтинг</Heading>
             </Box>
           </Box>
         </SimpleGrid>

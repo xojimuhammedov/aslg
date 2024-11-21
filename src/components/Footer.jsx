@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import FooterBanner from "../assets/footer.jpg";
 import Instagram from "../assets/instagram.svg";
 import Facebook from "../assets/facebook.svg";
@@ -47,7 +55,10 @@ function Footer() {
               </Link>
             </Flex>
           </Box>
-          <Flex width={"100%"} justifyContent={"space-between"}>
+          <SimpleGrid
+            columns={3}
+            width={"100%"}
+            justifyContent={"space-between"}>
             <Box position={"relative"} zIndex={"3"}>
               <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
@@ -72,19 +83,16 @@ function Footer() {
               <Heading {...css.title}>Our Services</Heading>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
-                  Home
+                  Международные грузоперевозки
                 </Link>
                 <Link {...css.link} href="/about">
-                  About
+                  Складирование и обработка грузов
                 </Link>
                 <Link {...css.link} href="/services">
-                  Services
+                  Таможенное оформление
                 </Link>
                 <Link {...css.link} href="/contact">
-                  Contact
-                </Link>
-                <Link {...css.link} href="/contact">
-                  Contact
+                  Логистический консалтинг
                 </Link>
               </Flex>
             </Box>
@@ -93,19 +101,19 @@ function Footer() {
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
                   <Image src={LocationIcon} alt="Location" />
-                  244, First Floor, Angeles
+                  г.Алматы, Тулебаева 38
                 </Link>
-                <Link {...css.link} href="/about">
+                <Link {...css.link} href="tel:+77753378595">
                   <Image src={CallIcon} alt="Call" />
-                  (880)1247536548
+                  +7(775)337-85-95
                 </Link>
-                <Link {...css.link} href="/services">
+                <Link {...css.link} href="mailto:sultanbek.asilbek@gmail.com">
                   <Image src={EmailIcon} alt="Email" />
-                  info@example.com
+                  sultanbek.asilbek@gmail.com
                 </Link>
               </Flex>
             </Box>
-          </Flex>
+          </SimpleGrid>
         </Flex>
       </Box>
     </Box>
@@ -165,9 +173,12 @@ const css = {
   link: {
     color: "#fff",
     lineHeight: "26px",
-    fontSize: "16px",
+    fontSize: "15px",
     fontWeight: "500",
-    marginBottom: "20px",
+    marginBottom: "14px",
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
   },
   title: {
     color: "#fff",
