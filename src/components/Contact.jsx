@@ -111,7 +111,7 @@ const css = {
     lineHeight: "26px",
   },
   right: {
-    backgroundColor: "#062E39",
+    backgroundColor: "#1670BB",
     borderRadius: "3px",
     padding: "50px 55px 60px",
     maxWidth: "486px",
@@ -126,7 +126,7 @@ const css = {
   },
   button: {
     backgroundColor: "#fff",
-    color: "#062E39",
+    color: "#1670BB",
     padding: "15px 40px",
     borderRadius: "5px",
     fontSize: "16px",
@@ -141,7 +141,7 @@ const css = {
     borderRadius: "2px",
     padding: "25px 35px",
     maxWidth: "200px",
-    backgroundColor: "#062E39",
+    backgroundColor: "#1670BB",
     width: "100%",
   },
   image: {

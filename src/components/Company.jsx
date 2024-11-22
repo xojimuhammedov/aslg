@@ -19,7 +19,7 @@ function Company() {
               *Asilbek Sultanbek Logistics Group* предлагает полный спектр
               логистических услуг, чтобы ваш груз всегда доставлялся вовремя,
               безопасно и с минимальными затратами.
-            </Text> 
+            </Text>
             <Link to={"/"}>
               <Text {...css.link}>{t("Read More")}</Text>
             </Link>
@@ -47,18 +47,18 @@ export default Company;
 const css = {
   title: {
     fontSize: "22px",
-    color: "#062e39",
+    color: "#1670BB",
     lineHeight: "36px",
   },
   serviceName: {
     fontSize: "22px",
-    color: "#062e39",
+    color: "#1670BB",
     lineHeight: "36px",
     marginTop: "20px",
   },
   name: {
     fontSize: "50px",
-    color: "#062e39",
+    color: "#1670BB",
     lineHeight: "55px",
     fontWeight: "700",
   },
@@ -100,7 +100,7 @@ const css = {
     zIndex: "3 !important",
   },
   link: {
-    backgroundColor: "#062e39",
+    backgroundColor: "#1670BB",
     color: "#fff",
     padding: "15px 40px",
     borderRadius: "5px",
@@ -111,11 +111,11 @@ const css = {
     width: "180px",
     textAlign: "center",
     marginTop: "20px",
-    border: "2px solid #062e39",
+    border: "2px solid #1670BB",
 
     _hover: {
       backgroundColor: "#fff",
-      color: "#062e39",
+      color: "#1670BB",
     },
   },
   images: {

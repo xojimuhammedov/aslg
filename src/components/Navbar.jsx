@@ -83,7 +83,7 @@ const css = {
     paddingTop: "20px",
   },
   top: {
-    backgroundColor: "#062E39",
+    backgroundColor: "#1670BB",
     width: "100%",
     padding: "10px 0",
     borderRadius: "0 5px 0 0",

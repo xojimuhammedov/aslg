@@ -57,7 +57,7 @@ const css = {
   content: {
     maxWidth: "415px",
     margin: "0 auto",
-    backgroundColor: "#062e39",
+    backgroundColor: "#1670BB",
     padding: "35px 50px 20px",
     position: "absolute",
     top: "50%",

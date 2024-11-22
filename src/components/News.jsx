@@ -62,7 +62,7 @@ const css = {
     fontSize: "55px",
     fontWeight: "700",
     lineHeight: "65px",
-    color: "#062E39",
+    color: "#1670BB",
     textAlign: "center",
   },
   top: {
@@ -76,7 +76,7 @@ const css = {
     padding: "25px 35px 25px",
   },
   name: {
-    color: "#062E39",
+    color: "#1670BB",
     marginBottom: "18px",
     fontSize: "26px",
     lineHeight:"36px"

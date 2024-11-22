@@ -40,7 +40,7 @@ const css = {
     fontSize: "55px",
     fontWeight: "700",
     lineHeight: "65px",
-    color: "#062E39",
+    color: "#1670BB",
     textAlign: "center",
   },
   box: {

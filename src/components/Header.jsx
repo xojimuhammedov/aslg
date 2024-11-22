@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Header() {
   const { t } = useTranslation();
   return (
-    <Box pb={'24px'} className="header">
+    <Box pb={"24px"} className="header">
       <Navbar />
       <Box className="container">
         <Box {...css.top}>
@@ -49,7 +49,7 @@ const css = {
     marginBottom: "10px",
   },
   link: {
-    backgroundColor: "#062e39",
+    backgroundColor: "#1670BB",
     color: "#fff",
     padding: "15px 40px",
     borderRadius: "5px",
@@ -62,7 +62,7 @@ const css = {
 
     _hover: {
       backgroundColor: "#fff",
-      color: "#062e39",
+      color: "#1670BB",
     },
   },
 };
