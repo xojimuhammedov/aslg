@@ -63,7 +63,9 @@ function TariffPage() {
                 <Flex align={"center"} gap={"12px"}>
                   <Image
                     {...css.image}
-                    src={OneTariffImage}
+                    src={
+                      "https://le-trans.kz/wp-content/uploads/2023/05/1-6.png"
+                    }
                     alt="OneTariffImage"
                   />
                   <Heading {...css.names}>АДРЕСНАЯ ДОСТАВКА</Heading>
@@ -77,7 +79,7 @@ function TariffPage() {
                 <Flex align={"center"} gap={"12px"}>
                   <Image
                     {...css.image}
-                    src={TwoTarifImage}
+                    src={OneTariffImage}
                     alt="OneTariffImage"
                   />
                   <Heading {...css.names}>Собственный автопарк</Heading>
@@ -91,7 +93,7 @@ function TariffPage() {
                 <Flex align={"center"} gap={"12px"}>
                   <Image
                     {...css.image}
-                    src={ThreeTarifImage}
+                    src={TwoTarifImage}
                     alt="OneTariffImage"
                   />
                   <Heading {...css.names}>ОПЛАТА В ОДИН КОНЕЦ</Heading>
@@ -105,7 +107,7 @@ function TariffPage() {
                 <Flex align={"center"} gap={"12px"}>
                   <Image
                     {...css.image}
-                    src={OneTariffImage}
+                    src={ThreeTarifImage}
                     alt="OneTariffImage"
                   />
                   <Heading {...css.names}>ДОСТАВКА ГРУЗА ТОЧНО В СРОК</Heading>
@@ -194,6 +196,7 @@ const css = {
     lineHeight: "18px",
     color: "#062e39",
     fontWeight: "600",
+    textTransform: "uppercase",
   },
   image: {
     width: "50px",
@@ -203,7 +206,7 @@ const css = {
     fontSize: "14px",
     lineHeight: "22px",
     color: "#515b67",
-    width: "230px",
+    width: "280px",
     marginTop: "10px",
   },
 };
