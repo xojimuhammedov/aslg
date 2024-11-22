@@ -58,6 +58,9 @@ function Navbar() {
                 <ALink to="/contact">
                   <Text {...css.link}>Contact</Text>
                 </ALink>
+                <ALink to="/tariff">
+                  <Text {...css.link}>Tariff</Text>
+                </ALink>
               </Flex>
               <Language />
             </Flex>

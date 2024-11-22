@@ -9,6 +9,7 @@ import Location from "./components/Location";
 import News from "./components/News";
 import Services from "./components/Services";
 import ContactPage from "./page/ContactPage";
+import TariffPage from "./page/TarifPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/tariff" element={<TariffPage />} />
       </Routes>
       <Footer />
     </>
