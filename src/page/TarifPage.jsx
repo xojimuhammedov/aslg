@@ -13,24 +13,27 @@ import Navbar from "../components/Navbar";
 import OneTariffImage from "../assets/delivery.webp";
 import TwoTarifImage from "../assets/2-3.png";
 import ThreeTarifImage from "../assets/3-3.webp";
+import { useTranslation } from "react-i18next";
 
 function TariffPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Box className="contact">
         <Navbar />
         <Box className="container">
-          <Heading {...css.title}>Tariff</Heading>
+          <Heading {...css.title}>{t("Tariff")}</Heading>
         </Box>
       </Box>
       <Box p={"48px 0"}>
         <Box className="container">
           <Heading {...css.name}>
-            Тарифы транспортной компании — Рассчитать стоимость перевозки
+            {t("Тарифы транспортной компании — Рассчитать стоимость перевозки")}
           </Heading>
           <Text {...css.text}>
-            Калькулятор автоматически рассчитывает стоимость, исходя из тарифов
-            за км, которые обычно действуют в нашей транспортной компании.
+            {t(
+              "Калькулятор автоматически рассчитывает стоимость, исходя из тарифов за км, которые обычно действуют в нашей транспортной компании."
+            )}
           </Text>
           <Flex justify={"space-between"}>
             <Box {...css.box}>
@@ -68,11 +71,12 @@ function TariffPage() {
                     }
                     alt="OneTariffImage"
                   />
-                  <Heading {...css.names}>АДРЕСНАЯ ДОСТАВКА</Heading>
+                  <Heading {...css.names}>{t("АДРЕСНАЯ ДОСТАВКА")}</Heading>
                 </Flex>
                 <Text {...css.texts}>
-                  Доставка до адреса получателя с уточнением удобного для него
-                  времени
+                  {t(
+                    "Доставка до адреса получателя с уточнением удобного для него времени"
+                  )}
                 </Text>
               </Box>
               <Box m={"12px 0"}>
@@ -82,11 +86,12 @@ function TariffPage() {
                     src={OneTariffImage}
                     alt="OneTariffImage"
                   />
-                  <Heading {...css.names}>Собственный автопарк</Heading>
+                  <Heading {...css.names}>{t("Собственный автопарк")}</Heading>
                 </Flex>
                 <Text {...css.texts}>
-                  Предоставляем широкий спектр услуг в перевозке грузов
-                  различных габаритов.
+                  {t(
+                    "Предоставляем широкий спектр услуг в перевозке грузов различных габаритов."
+                  )}
                 </Text>
               </Box>
               <Box m={"12px 0"}>
@@ -96,11 +101,12 @@ function TariffPage() {
                     src={TwoTarifImage}
                     alt="OneTariffImage"
                   />
-                  <Heading {...css.names}>ОПЛАТА В ОДИН КОНЕЦ</Heading>
+                  <Heading {...css.names}>{t("ОПЛАТА В ОДИН КОНЕЦ")}</Heading>
                 </Flex>
                 <Text {...css.texts}>
-                  Вы оплачиваете стоимость перевозки в один конец, не платите за
-                  обратную дорогу
+                  {t(
+                    "Вы оплачиваете стоимость перевозки в один конец, не платите за обратную дорогу"
+                  )}
                 </Text>
               </Box>
               <Box m={"12px 0"}>
@@ -110,11 +116,14 @@ function TariffPage() {
                     src={ThreeTarifImage}
                     alt="OneTariffImage"
                   />
-                  <Heading {...css.names}>ДОСТАВКА ГРУЗА ТОЧНО В СРОК</Heading>
+                  <Heading {...css.names}>
+                    {t("ДОСТАВКА ГРУЗА ТОЧНО В СРОК")}
+                  </Heading>
                 </Flex>
                 <Text {...css.texts}>
-                  Мы гарантируем качественную доставку груза точно в указанный
-                  срок
+                  {t(
+                    "Мы гарантируем качественную доставку груза точно в указанный срок"
+                  )}
                 </Text>
               </Box>
             </Box>
