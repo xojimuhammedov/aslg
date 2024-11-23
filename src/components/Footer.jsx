@@ -63,36 +63,36 @@ function Footer() {
               <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
-                  Home
+                  {t("Home")}
                 </Link>
                 <Link {...css.link} href="/about">
-                  About
+                  {t("About")}
                 </Link>
                 <Link {...css.link} href="/services">
-                  Services
+                  {t("Services")}
                 </Link>
                 <Link {...css.link} href="/contact">
-                  Contact
+                  {t("Contact")}
                 </Link>
                 <Link {...css.link} href="/contact">
-                  Contact
+                  {t("Tariff")}
                 </Link>
               </Flex>
             </Box>
             <Box position={"relative"} zIndex={"3"}>
-              <Heading {...css.title}>Our Services</Heading>
+              <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
-                  Международные грузоперевозки
+                  {t("Международные грузоперевозки")}
                 </Link>
                 <Link {...css.link} href="/about">
-                  Складирование и обработка грузов
+                  {t("Складирование и обработка грузов")}
                 </Link>
                 <Link {...css.link} href="/services">
-                  Таможенное оформление
+                  {t("Таможенное оформление")}
                 </Link>
                 <Link {...css.link} href="/contact">
-                  Логистический консалтинг
+                  {t("Логистический консалтинг")}
                 </Link>
               </Flex>
             </Box>
@@ -101,7 +101,7 @@ function Footer() {
               <Flex flexDirection={"column"}>
                 <Link {...css.link} href="/">
                   <Image src={LocationIcon} alt="Location" />
-                  г.Алматы, Тулебаева 38
+                  {t("г.Алматы, Тулебаева 38")}
                 </Link>
                 <Link {...css.link} href="tel:+77753378595">
                   <Image src={CallIcon} alt="Call" />

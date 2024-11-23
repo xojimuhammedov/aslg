@@ -10,6 +10,7 @@ import News from "./components/News";
 import Services from "./components/Services";
 import ContactPage from "./page/ContactPage";
 import TariffPage from "./page/TarifPage";
+import ServiceAbout from "./page/ServiceAbout";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/tariff" element={<TariffPage />} />
+        <Route path="/service-about/:id" element={<ServiceAbout />} />
       </Routes>
       <Footer />
     </>

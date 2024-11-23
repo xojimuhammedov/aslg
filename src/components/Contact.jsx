@@ -22,7 +22,7 @@ function Contact() {
           <Box {...css.left}>
             <Box {...css.top}>
               <Heading {...css.title}>
-                We are the Future of Cargo & Logistics
+                {t("We are the Future of Cargo & Logistics")}
               </Heading>
               <Text {...css.text}>
                 Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla

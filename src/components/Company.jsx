@@ -14,11 +14,7 @@ function Company() {
               {t("Добро пожаловать в Asilbek Sultanbek Logistics Group!")}
             </Heading>
             <Text {...css.text}>
-              Мы — надежный партнер в мире логистики, специализирующийся на
-              предоставлении комплексных решений для вашего бизнеса. Компания
-              *Asilbek Sultanbek Logistics Group* предлагает полный спектр
-              логистических услуг, чтобы ваш груз всегда доставлялся вовремя,
-              безопасно и с минимальными затратами.
+              {t("companyText")}
             </Text>
             <Link to={"/"}>
               <Text {...css.link}>{t("Read More")}</Text>

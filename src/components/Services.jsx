@@ -1,32 +1,26 @@
-import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import ServiceOne from "../assets/service1.jpg";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { serviceData } from "../data";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Services() {
+  const { t, i18n } = useTranslation();
   return (
     <Box p={"36px 0"}>
       <Box className="container">
-        <Heading {...css.title}>Logistic & Transport</Heading>
+        <Heading {...css.title}>{t("Logistic & Transport")}</Heading>
         <SimpleGrid mt={"48px"} columns={3} gap={"24px"}>
-          <Box {...css.box}>
-            <Box {...css.content}>
-              <Heading {...css.name}>Международные грузоперевозки</Heading>
-            </Box>
-          </Box>
-          <Box {...css.box}>
-            <Box {...css.content}>
-              <Heading {...css.name}>Складирование и обработка грузов</Heading>
-            </Box>
-          </Box>
-          <Box {...css.box}>
-            <Box {...css.content}>
-              <Heading {...css.name}>Таможенное оформление</Heading>
-            </Box>
-          </Box>
-          <Box {...css.box}>
-            <Box {...css.content}>
-              <Heading {...css.name}>Логистический консалтинг</Heading>
-            </Box>
-          </Box>
+          {serviceData.map((item, index) => (
+            <Link key={index} to={`/service-about/${item.id}`}>
+              <Box backgroundImage={`url(${item.image})`} {...css.box}>
+                <Box {...css.content}>
+                  <Heading {...css.name}>
+                    {item[`title_${i18n?.language}`]}
+                  </Heading>
+                </Box>
+              </Box>
+            </Link>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>
@@ -44,7 +38,7 @@ const css = {
     textAlign: "center",
   },
   box: {
-    backgroundImage: `url(${ServiceOne})`,
+    // backgroundImage: `url(${ServiceOne})`,
     position: "relative",
     overflow: "hidden",
     borderRadius: "3px",

@@ -17,7 +17,7 @@ const languageData = [
   {
     id: 1,
     image: UzbekImage,
-    value: "uz",
+    value: "kz",
   },
   {
     id: 2,
@@ -39,13 +39,14 @@ function Language() {
   };
 
   const languageImage =
-    i18n?.language === "uz"
+    i18n?.language === "kz"
       ? UzbekImage
       : i18n?.language === "ru"
       ? RussianImage
       : EnglishImage;
 
   const data = languageData?.filter((item) => item?.value != i18n.language);
+
 
   return (
     <>
