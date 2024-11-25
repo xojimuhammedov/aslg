@@ -11,6 +11,8 @@ import Services from "./components/Services";
 import ContactPage from "./page/ContactPage";
 import TariffPage from "./page/TarifPage";
 import ServiceAbout from "./page/ServiceAbout";
+import AboutPage from "./page/AboutPage";
+import Aside from "./components/Aside";
 
 function App() {
   return (
@@ -22,9 +24,10 @@ function App() {
             <>
               <Header />
               <Services />
+              <Aside />
               <Company />
               <Contact />
-              <Blog />
+              {/* <Blog /> */}
               <Location />
               <News />
             </>
@@ -33,6 +36,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/tariff" element={<TariffPage />} />
         <Route path="/service-about/:id" element={<ServiceAbout />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />
     </>

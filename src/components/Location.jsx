@@ -8,13 +8,16 @@ import {
   Flex,
   Link,
   Image,
+  Heading,
 } from "@chakra-ui/react";
 
 import LocationIcon from "../assets/location.svg";
 import EmailIcon from "../assets/mail-open.svg";
 import CallIcon from "../assets/call.svg";
+import { useTranslation } from "react-i18next";
 
 function Location() {
+  const { t } = useTranslation();
   return (
     <Box p={"36px 0"} position={"relative"}>
       <iframe
@@ -25,7 +28,22 @@ function Location() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"></iframe>
       <Box {...css.content}>
-        <Accordion defaultValue={[0]}>
+        <Heading {...css.title}>{t("Contact Info")}</Heading>
+        <Flex flexDirection={"column"}>
+          <Link {...css.link} href="/">
+            <Image src={LocationIcon} alt="Location" />
+            {t("г.Алматы, Тулебаева 38")}
+          </Link>
+          <Link {...css.link} href="tel: +77753378595">
+            <Image src={CallIcon} alt="Call" />
+            +7(775)337-85-95
+          </Link>
+          <Link {...css.link} href="mailto:sultanbek.asilbek@gmail.com">
+            <Image src={EmailIcon} alt="Email" />
+            sultanbek.asilbek@gmail.com
+          </Link>
+        </Flex>
+        {/* <Accordion defaultValue={[0]}>
           <AccordionItem m={"15px 0"} value={"a"}>
             <AccordionButton {...css.title}>Location</AccordionButton>
             <AccordionPanel {...css.text}>
@@ -45,7 +63,7 @@ function Location() {
               </Flex>
             </AccordionPanel>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </Box>
     </Box>
   );
@@ -68,9 +86,9 @@ const css = {
   },
   title: {
     color: "#fff",
-    fontSize: "24px",
+    fontSize: "22px",
     lineHeight: "32px",
-    cursor: "pointer",
+    marginBottom: "20px",
   },
   text: {
     color: "#fff",

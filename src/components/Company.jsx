@@ -2,6 +2,8 @@ import { border, Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
+import CeoImage from "../assets/ceo.jpg";
+
 function Company() {
   const { t } = useTranslation();
   return (
@@ -13,9 +15,7 @@ function Company() {
             <Heading {...css.name}>
               {t("Добро пожаловать в Asilbek Sultanbek Logistics Group!")}
             </Heading>
-            <Text {...css.text}>
-              {t("companyText")}
-            </Text>
+            <Text {...css.text}>{t("companyText")}</Text>
             <Link to={"/"}>
               <Text {...css.link}>{t("Read More")}</Text>
             </Link>
@@ -27,10 +27,7 @@ function Company() {
                 {...css.image}
               />
             </Box>
-            <Image
-              src="https://themejunction.net/html/logiland/demo/assets/images/about/ab-2.jpg"
-              {...css.images}
-            />
+            <Image src={CeoImage} {...css.images} />
           </Box>
         </Flex>
       </Box>
@@ -119,6 +116,8 @@ const css = {
     zIndex: "3 !important",
     width: "60%",
     marginTop: "240px",
+    height: "500px",
+    objectFit:"cover"
   },
   right: {
     position: "relative",

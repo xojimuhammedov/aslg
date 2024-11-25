@@ -9,7 +9,13 @@ function News() {
         <SimpleGrid columns={3} mt={"36px"} gap={"24px"}>
           <Box>
             <Box {...css.top}>
-              <Image {...css.image} src={NewsImage} alt="NewsImage" />
+              <Image
+                {...css.image}
+                src={
+                  "https://themejunction.net/html/logiland/demo/assets/images/project/project-5.jpg"
+                }
+                alt="NewsImage"
+              />
             </Box>
             <Box {...css.content}>
               <Heading {...css.name}>
@@ -23,7 +29,13 @@ function News() {
           </Box>
           <Box>
             <Box {...css.top}>
-              <Image {...css.image} src={NewsImage} alt="NewsImage" />
+              <Image
+                {...css.image}
+                src={
+                  "https://themejunction.net/html/logiland/demo/assets/images/blog/blog-3.jpg"
+                }
+                alt="NewsImage"
+              />
             </Box>
             <Box {...css.content}>
               <Heading {...css.name}>
@@ -37,7 +49,13 @@ function News() {
           </Box>
           <Box>
             <Box {...css.top}>
-              <Image {...css.image} src={NewsImage} alt="NewsImage" />
+              <Image
+                {...css.image}
+                src={
+                  "https://themejunction.net/html/logiland/demo/assets/images/blog/blog-1.jpg"
+                }
+                alt="NewsImage"
+              />
             </Box>
             <Box {...css.content}>
               <Heading {...css.name}>
@@ -79,7 +97,7 @@ const css = {
     color: "#1670BB",
     marginBottom: "18px",
     fontSize: "26px",
-    lineHeight:"36px"
+    lineHeight: "36px",
   },
   text: {
     color: "#7c858c",

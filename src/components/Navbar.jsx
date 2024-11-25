@@ -6,6 +6,7 @@ import Telegram from "../assets/tg.svg";
 import Twitter from "../assets/twitter-new.svg";
 import Language from "./Language";
 import { Link as ALink } from "react-router-dom";
+import LogoIcon from "../assets/logos.jpg";
 
 function Navbar() {
   return (
@@ -14,13 +15,7 @@ function Navbar() {
         <Flex {...css.navbarMenu}>
           <Box {...css.left}>
             <ALink to="/">
-              <Image
-                {...css.image}
-                src={
-                  "https://themejunction.net/html/logiland/demo/assets/images/logo/logo.png"
-                }
-                alt="ASLG Logo"
-              />
+              <Image {...css.image} src={LogoIcon} alt="ASLG Logo" />
             </ALink>
           </Box>
           <Box width={"100%"}>
@@ -75,7 +70,9 @@ export default Navbar;
 
 const css = {
   image: {
-    width: "200px",
+    width: "150px",
+    height: "120px",
+    objectFit: "cover",
   },
   navbar: {
     position: "relative",
@@ -83,9 +80,9 @@ const css = {
     paddingTop: "20px",
   },
   top: {
-    backgroundColor: "#1670BB",
+    backgroundColor: "#0062AD",
     width: "100%",
-    padding: "10px 0",
+    padding: "10px 15px",
     borderRadius: "0 5px 0 0",
     alignItems: "center",
   },
@@ -95,18 +92,16 @@ const css = {
   },
   date: {
     color: "#fff",
-    paddingLeft: "40px",
   },
   left: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "15px 20px",
+    // padding: "15px 20px",
   },
   bottom: {
-    padding: "10px 0",
     justifyContent: "space-between",
-    paddingRight: "20px",
+    padding: "20px 15px",
   },
   link: {
     color: "#062e39",

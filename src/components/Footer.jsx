@@ -17,6 +17,7 @@ import LocationIcon from "../assets/location.svg";
 import EmailIcon from "../assets/mail-open.svg";
 import CallIcon from "../assets/call.svg";
 import { useTranslation } from "react-i18next";
+import LogoIcon from "../assets/logos.jpg";
 
 function Footer() {
   const { t } = useTranslation();
@@ -25,13 +26,7 @@ function Footer() {
       <Box className="container">
         <Flex gap={"60px"} align={"center"} justify={"space-between"}>
           <Box {...css.left}>
-            <Image
-              {...css.image}
-              src={
-                "https://themejunction.net/html/logiland/demo/assets/images/logo/logo.png"
-              }
-              alt="ASLG Logo"
-            />
+            <Image {...css.image} src={LogoIcon} alt="ASLG Logo" />
             <Text {...css.text}>
               A farm is a plot of land that is used to grow crops and raise
               livestock, as in our farm, we raise sheep and sell their wool the
@@ -150,8 +145,8 @@ const css = {
     zIndex: 3,
     maxWidth: "385px",
     // width: "100%",
-    padding: "70px 50px 75px",
-    backgroundColor: "#062e39",
+    padding: "10px 50px 15px",
+    backgroundColor: "#0062AD",
     marginBottom: 0,
   },
   text: {
@@ -182,7 +177,7 @@ const css = {
   },
   title: {
     color: "#fff",
-    fontSize: "24px",
+    fontSize: "22px",
     lineHeight: "32px",
     marginBottom: "20px",
   },
