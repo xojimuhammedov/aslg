@@ -29,9 +29,9 @@ function Footer() {
           <Box {...css.left}>
             <Image {...css.image} src={LogoIcon} alt="ASLG Logo" />
             <Text {...css.text}>
-              A farm is a plot of land that is used to grow crops and raise
-              livestock, as in our farm, we raise sheep and sell their wool the
-              word farm is also.
+              {t(
+                "Explain to you how all this mistaken denouncing pleasure and praising pain was born and we will give you"
+              )}
             </Text>
             <Flex align={"center"} mt={"35px"}>
               <Link href="/" {...css.social}>
@@ -160,7 +160,6 @@ const css = {
     color: "#fff",
     fontSize: "16px",
     lineHeight: "24px",
-    marginTop: "20px",
   },
   social: {
     background: "#1b1a1a",
