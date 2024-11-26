@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import UzbekImage from "../assets/kz.png";
 import RussianImage from "../assets/russian.png";
 import EnglishImage from "../assets/english.png";
+import ChinaImage from "../assets/china.png";
 import {
   Box,
-  Button,
   Image,
   Menu,
   MenuButton,
@@ -29,6 +29,11 @@ const languageData = [
     image: EnglishImage,
     value: "en",
   },
+  {
+    id: 4,
+    image: ChinaImage,
+    value: "chn",
+  },
 ];
 
 function Language() {
@@ -43,10 +48,11 @@ function Language() {
       ? UzbekImage
       : i18n?.language === "ru"
       ? RussianImage
+      : i18n?.language === "chn"
+      ? ChinaImage
       : EnglishImage;
 
   const data = languageData?.filter((item) => item?.value != i18n.language);
-
 
   return (
     <>
@@ -88,6 +94,6 @@ const css = {
     width: "30px",
     borderRadius: "50%",
     height: "30px",
-    objectFit:"cover"
+    objectFit: "cover",
   },
 };
