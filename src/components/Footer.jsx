@@ -18,6 +18,7 @@ import EmailIcon from "../assets/mail-open.svg";
 import CallIcon from "../assets/call.svg";
 import { useTranslation } from "react-i18next";
 import LogoIcon from "../assets/logos.jpg";
+import { Link as RouterLink } from "react-router-dom";
 
 function Footer() {
   const { t } = useTranslation();
@@ -57,38 +58,44 @@ function Footer() {
             <Box position={"relative"} zIndex={"3"}>
               <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
-                <Link {...css.link} href="/">
-                  {t("Home")}
-                </Link>
-                <Link {...css.link} href="/about">
-                  {t("About")}
-                </Link>
-                <Link {...css.link} href="/services">
+                <RouterLink to="/">
+                  <Text {...css.link}>{t("Home")}</Text>
+                </RouterLink>
+                <RouterLink to={"/about"}>
+                  <Text {...css.link}>{t("About")}</Text>
+                </RouterLink>
+                <Link {...css.link} href="#services">
                   {t("Services")}
                 </Link>
-                <Link {...css.link} href="/contact">
+                <Link {...css.link} href="#contact">
                   {t("Contact")}
                 </Link>
-                <Link {...css.link} href="/contact">
-                  {t("Tariff")}
-                </Link>
+                <RouterLink to={"/tariff"}>
+                  <Text {...css.link}>{t("Tariff")}</Text>
+                </RouterLink>
               </Flex>
             </Box>
             <Box position={"relative"} zIndex={"3"}>
               <Heading {...css.title}>{t("Our Services")}</Heading>
               <Flex flexDirection={"column"}>
-                <Link {...css.link} href="/">
-                  {t("Международные грузоперевозки")}
-                </Link>
-                <Link {...css.link} href="/about">
-                  {t("Складирование и обработка грузов")}
-                </Link>
-                <Link {...css.link} href="/services">
-                  {t("Таможенное оформление")}
-                </Link>
-                <Link {...css.link} href="/contact">
-                  {t("Логистический консалтинг")}
-                </Link>
+                <RouterLink to="/service-about/1">
+                  <Text {...css.link}>
+                    {" "}
+                    {t("Международные грузоперевозки")}
+                  </Text>
+                </RouterLink>
+                <RouterLink to="/service-about/2">
+                  <Text {...css.link}>
+                    {" "}
+                    {t("Складирование и обработка грузов")}
+                  </Text>
+                </RouterLink>
+                <RouterLink to="/service-about/3">
+                  <Text {...css.link}> {t("Таможенное оформление")}</Text>
+                </RouterLink>
+                <RouterLink to="/service-about/4">
+                  <Text {...css.link}> {t("Логистический консалтинг")}</Text>
+                </RouterLink>
               </Flex>
             </Box>
             <Box position={"relative"} zIndex={"3"}>

@@ -9,35 +9,37 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Navbar from "../components/Navbar";
+import { useTranslation } from "react-i18next";
 
 function ContactPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Box className="contact">
         <Navbar />
         <Box className="container">
-          <Heading {...css.title}>Contact Us</Heading>
+          <Heading {...css.title}>{t("Contact Us")}</Heading>
         </Box>
       </Box>
       <Box p={"48px 0"} className="container">
-        <Flex align={'center'} justifyContent={"space-between"}>
+        <Flex align={"center"} justifyContent={"space-between"}>
           <Box>
-            <Heading {...css.name}>Get in Touch With Us</Heading>
+            <Heading {...css.name}>{t("Get in Touch With Us")}</Heading>
             <Flex m={"12px 0"} gap={"12px"}>
-              <Input {...css.input} placeholder="FullName" type="text" />
-              <Input {...css.input} placeholder="Email" type="email" />
+              <Input {...css.input} placeholder={t("FullName")} type="text" />
+              <Input {...css.input} placeholder={t("Email")} type="email" />
             </Flex>
             <Flex m={"12px 0"} gap={"12px"}>
-              <Input {...css.input} placeholder="Phone" type="tell" />
-              <Input {...css.input} placeholder="Company" type="text" />
+              <Input {...css.input} placeholder={t("Phone")} type="tell" />
+              <Input {...css.input} placeholder={t("Company")} type="text" />
             </Flex>
             <Flex m={"12px 0"} gap={"12px"}>
-              <Input {...css.input} placeholder="Phone" type="tell" />
-              <Input {...css.input} placeholder="Company" type="text" />
+              <Input {...css.input} placeholder={t("Country")} type="tell" />
+              <Input {...css.input} placeholder={t("City")} type="text" />
             </Flex>
             <Textarea placeholder="Message" {...css.message} />
             <Button type="submit" {...css.button}>
-              Send Message
+              {t("Send Message")}
             </Button>
           </Box>
           <Box>

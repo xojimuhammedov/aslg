@@ -7,8 +7,10 @@ import Twitter from "../assets/twitter-new.svg";
 import Language from "./Language";
 import { Link as ALink } from "react-router-dom";
 import LogoIcon from "../assets/logos.jpg";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t } = useTranslation();
   return (
     <Box {...css.navbar}>
       <Box className="container">
@@ -42,19 +44,19 @@ function Navbar() {
             <Flex {...css.bottom}>
               <Flex gap={"24px"} align={"center"}>
                 <ALink to="/">
-                  <Text {...css.link}>Home</Text>
+                  <Text {...css.link}>{t("Home")}</Text>
                 </ALink>
                 <ALink to="/about">
-                  <Text {...css.link}>About</Text>
+                  <Text {...css.link}>{t("About")}</Text>
                 </ALink>
                 <ALink to="/services">
-                  <Text {...css.link}>Services</Text>
+                  <Text {...css.link}>{t("Services")}</Text>
                 </ALink>
                 <ALink to="/contact">
-                  <Text {...css.link}>Contact</Text>
+                  <Text {...css.link}>{t("Contact")}</Text>
                 </ALink>
                 <ALink to="/tariff">
-                  <Text {...css.link}>Tariff</Text>
+                  <Text {...css.link}>{t("Tariff")}</Text>
                 </ALink>
               </Flex>
               <Language />

@@ -27,7 +27,6 @@ function App() {
               <Aside />
               <Company />
               <Contact />
-              {/* <Blog /> */}
               <Location />
               <News />
             </>

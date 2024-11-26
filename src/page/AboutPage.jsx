@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 
 import CeoImage from "../assets/ceo.jpg";
 import Navbar from "../components/Navbar";
@@ -13,10 +12,10 @@ function AboutPage() {
       <Box className="contact">
         <Navbar />
         <Box className="container">
-          <Heading {...css.titles}>About Us</Heading>
+          <Heading {...css.titles}>{t("About Us")}</Heading>
         </Box>
       </Box>
-      <Box p={"120px 0"} pb={'60px'}>
+      <Box p={"120px 0"} pb={"60px"}>
         <Box className="container">
           <Flex>
             <Box w={"50%"}>

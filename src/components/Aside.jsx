@@ -2,8 +2,10 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import AsideBanner from "../assets/aside.jpg";
 import WhiteImage from "../assets/white.png";
+import { useTranslation } from "react-i18next";
 
 function Aside() {
+  const { t } = useTranslation();
   return (
     <Box {...css.aside}>
       <Box {...css.banner}></Box>
@@ -11,11 +13,14 @@ function Aside() {
         <Flex align={"center"} justify={"space-between"}>
           <Box {...css.content}>
             <Heading {...css.title}>
-              Свяжитесь с нами, и мы предложим лучшее решение для вашего
-              бизнеса!
+              {t(
+                "Свяжитесь с нами, и мы предложим лучшее решение для вашего бизнеса!"
+              )}
             </Heading>
             <Text {...css.text}>
-              Asilbek Sultanbek Logistics Group — ваш ключ к успешной логистике.
+              {t(
+                "Asilbek Sultanbek Logistics Group — ваш ключ к успешной логистике."
+              )}
             </Text>
           </Box>
           <Button {...css.link} variant="primary" size="lg">

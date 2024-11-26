@@ -24,10 +24,10 @@ function Contact() {
               <Heading {...css.title}>
                 {t("We are the Future of Cargo & Logistics")}
               </Heading>
-              <Text {...css.text}>
+              {/* <Text {...css.text}>
                 Quisque dignissim enim diam, eget pulvinar ex viverra id. Nulla
                 a lobortis lectus, id volutpat magna. Morbi consequat porttitor
-              </Text>
+              </Text> */}
             </Box>
             <Flex align={"center"} gap={"12px"}>
               <Flex {...css.item}>
@@ -99,8 +99,8 @@ const css = {
     zIndex: "3",
   },
   title: {
-    fontSize: "55px",
-    lineHeight: "65px",
+    fontSize: "50px",
+    lineHeight: "55px",
     color: "#fff",
     fontWeight: "700",
     margin: "20px 0",
@@ -151,7 +151,7 @@ const css = {
   },
   subname: {
     color: "#fff",
-    fontSize: "20px",
+    fontSize: "18px",
     fontWeight: "700",
     marginTop: "15px",
     textAlign: "center",
