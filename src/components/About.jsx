@@ -1,28 +1,25 @@
-import {
-  background,
-  Box,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 import GroupOne from "../assets/Group 14.svg";
 import GroupTwo from "../assets/Group 14 (1).svg";
 import GroupThree from "../assets/Group 14 (2).svg";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const { t } = useTranslation();
   return (
     <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.subname}>About</Heading>
+        <Heading {...css.subname}>{t("About")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>Solution for your business need</Heading>
+          <Heading {...css.title}>
+            {t("Solution for your business need")}
+          </Heading>
           <Text {...css.subtext}>
-            We make logistic shipping much easier and straighforward. Combining
-            good service and technology make everything efficient
+            {t(
+              "We make logistic shipping much easier and straighforward. Combining good service and technology make everything efficient"
+            )}
           </Text>
         </Flex>
         <SimpleGrid gap={"30px"} mt={"60px"} columns={3}>

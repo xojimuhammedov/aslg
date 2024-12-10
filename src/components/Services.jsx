@@ -37,7 +37,6 @@ export default Services;
 
 const css = {
   about: {
-    background: "#F6F6F6",
     padding: "90px 0",
   },
   subname: {

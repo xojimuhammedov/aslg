@@ -14,16 +14,16 @@ function Navbar() {
           </Link>
           <Flex align={"center"} gap={"32px"}>
             <Link to={"/"}>
-              <Text {...css.link}>About</Text>
+              <Text {...css.link}>{t("About")}</Text>
             </Link>
             <Link to={"/"}>
-              <Text {...css.link}>Services</Text>
+              <Text {...css.link}>{t("Services")}</Text>
             </Link>
             <Link to={"/"}>
-              <Text {...css.link}>Tariffs</Text>
+              <Text {...css.link}>{t("Tariff")}</Text>
             </Link>
             <Link to={"/"}>
-              <Text {...css.link}>Contact</Text>
+              <Text {...css.link}>{t("Contact")}</Text>
             </Link>
             <Language />
           </Flex>
