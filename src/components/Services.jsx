@@ -1,26 +1,32 @@
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
-import { serviceData } from "../data";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import React from "react";
+
+import ServiceImage from "../assets/services.png";
 
 function Services() {
-  const { t, i18n } = useTranslation();
   return (
-    <Box p={"36px 0"}>
+    <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.title}>{t("Logistic & Transport")}</Heading>
-        <SimpleGrid mt={"48px"} columns={3} gap={"24px"}>
-          {serviceData.map((item, index) => (
-            <Link key={index} to={`/service-about/${item.id}`}>
-              <Box backgroundImage={`url(${item.image})`} {...css.box}>
-                <Box {...css.content}>
-                  <Heading {...css.name}>
-                    {item[`title_${i18n?.language}`]}
-                  </Heading>
-                </Box>
-              </Box>
-            </Link>
-          ))}
+        <Heading {...css.subname}>Services</Heading>
+        <Flex align={"center"} justify={"space-between"}>
+          <Heading {...css.title}>
+            Discover The Full Range Of Services Wee Offer For Shipping
+          </Heading>
+          <Text {...css.subtext}>
+            We make logistic shipping much easier and straighforward. Combining
+            good service and technology make everything efficient
+          </Text>
+        </Flex>
+        <SimpleGrid mt={"60px"} gap={"30px"} columns={3}>
+          <Box>
+            <Image src={ServiceImage} alt="ServiceImage" />
+          </Box>
+          <Box>
+            <Image src={ServiceImage} alt="ServiceImage" />
+          </Box>
+          <Box>
+            <Image src={ServiceImage} alt="ServiceImage" />
+          </Box>
         </SimpleGrid>
       </Box>
     </Box>
@@ -30,48 +36,31 @@ function Services() {
 export default Services;
 
 const css = {
+  about: {
+    background: "#F6F6F6",
+    padding: "90px 0",
+  },
+  subname: {
+    color: "#0563AB",
+    fontSize: "22px",
+    fontWeight: "600",
+    lineHeight: "normal",
+    marginBottom: "30px",
+  },
   title: {
-    fontSize: "55px",
-    fontWeight: "700",
-    lineHeight: "65px",
-    color: "#1670BB",
-    textAlign: "center",
+    fontSize: "65px",
+    lineHeight: "80px",
+    fontWeight: "600",
+    letterSpacing: "0.65px",
+    color: "#000000",
+    width: "750px",
   },
-  box: {
-    // backgroundImage: `url(${ServiceOne})`,
-    position: "relative",
-    overflow: "hidden",
-    borderRadius: "3px",
-    minHeight: "422px",
-    display: "flex",
-    alignItems: "end",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-
-    _before: {
-      background: "rgba(6, 46, 57, 0.5)",
-      borderRadius: "8px 8px 0 0",
-      position: "absolute",
-      height: "100%",
-      width: "100%",
-      left: "0",
-      bottom: "0",
-      content: "''",
-      transition: "all 400ms ease-out 0s",
-    },
-  },
-  name: {
-    color: "#fff",
-    fontWeight: "700",
-    fontSize: "24px",
-  },
-  content: {
-    padding: "35px 40px",
-    transition: "0.4s",
-    zIndex: "3",
-  },
-  text: {
-    color: "#fff",
+  subtext: {
+    fontSize: "18px",
+    lineHeight: "28px",
+    fontWeight: "400",
+    color: "#000000",
+    letterSpacing: "0.18px",
+    width: "400px",
   },
 };

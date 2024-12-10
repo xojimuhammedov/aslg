@@ -1,67 +1,32 @@
-import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
-import Instagram from "../assets/instagram.svg";
-import Facebook from "../assets/facebook.svg";
-import Linkedin from "../assets/linkedin.svg";
-import Telegram from "../assets/tg.svg";
-import Twitter from "../assets/twitter-new.svg";
-import Language from "./Language";
-import { Link as ALink } from "react-router-dom";
-import LogoIcon from "../assets/logos.jpg";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import Language from "./Language";
 
 function Navbar() {
   const { t } = useTranslation();
   return (
     <Box {...css.navbar}>
       <Box className="container">
-        <Flex {...css.navbarMenu}>
-          <Box {...css.left}>
-            <ALink to="/">
-              <Image {...css.image} src={LogoIcon} alt="ASLG Logo" />
-            </ALink>
-          </Box>
-          <Box width={"100%"}>
-            <Flex {...css.top}>
-              <Text {...css.date}>Mon - Sat: 8 am - 5 pm, Sunday: Closed</Text>
-              <Flex gap={"8px"} align={"center"} ml={"auto"}>
-                <Link href="/" {...css.social}>
-                  <Image src={Instagram} alt="Instagram" />
-                </Link>
-                <Link href="/" {...css.social}>
-                  <Image src={Facebook} alt="Facebook" />
-                </Link>
-                <Link href="/" {...css.social}>
-                  <Image src={Linkedin} alt="Linkedin" />
-                </Link>
-                <Link href="/" {...css.social}>
-                  <Image src={Telegram} alt="Telegram" />
-                </Link>
-                <Link mr={"12px"} href="/" {...css.social}>
-                  <Image src={Twitter} alt="Twitter" />
-                </Link>
-              </Flex>
-            </Flex>
-            <Flex {...css.bottom}>
-              <Flex gap={"24px"} align={"center"}>
-                <ALink to="/">
-                  <Text {...css.link}>{t("Home")}</Text>
-                </ALink>
-                <ALink to="/about">
-                  <Text {...css.link}>{t("About")}</Text>
-                </ALink>
-                <ALink to="/services">
-                  <Text {...css.link}>{t("Services")}</Text>
-                </ALink>
-                <ALink to="/contact">
-                  <Text {...css.link}>{t("Contact")}</Text>
-                </ALink>
-                <ALink to="/tariff">
-                  <Text {...css.link}>{t("Tariff")}</Text>
-                </ALink>
-              </Flex>
-              <Language />
-            </Flex>
-          </Box>
+        <Flex justifyContent={"space-between"} align={"center"}>
+          <Link to={"/"}>
+            <Heading as={"h3"}>FLEXILOADS</Heading>
+          </Link>
+          <Flex align={"center"} gap={"32px"}>
+            <Link to={"/"}>
+              <Text {...css.link}>About</Text>
+            </Link>
+            <Link to={"/"}>
+              <Text {...css.link}>Services</Text>
+            </Link>
+            <Link to={"/"}>
+              <Text {...css.link}>Tariffs</Text>
+            </Link>
+            <Link to={"/"}>
+              <Text {...css.link}>Contact</Text>
+            </Link>
+            <Language />
+          </Flex>
         </Flex>
       </Box>
     </Box>
@@ -71,44 +36,13 @@ function Navbar() {
 export default Navbar;
 
 const css = {
-  image: {
-    width: "150px",
-    height: "120px",
-    objectFit: "cover",
+  link: {
+    fontSize: "18px",
+    lineHeight: "22px",
+    fontWeight: "500",
+    color: "rgba(0, 0, 0, 1)",
   },
   navbar: {
-    position: "relative",
-    zIndex: "9",
-    paddingTop: "20px",
-  },
-  top: {
-    backgroundColor: "#0062AD",
-    width: "100%",
-    padding: "10px 15px",
-    borderRadius: "0 5px 0 0",
-    alignItems: "center",
-  },
-  navbarMenu: {
-    backgroundColor: "#fff",
-    borderRadius: "5px",
-  },
-  date: {
-    color: "#fff",
-  },
-  left: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    // padding: "15px 20px",
-  },
-  bottom: {
-    justifyContent: "space-between",
-    padding: "20px 15px",
-  },
-  link: {
-    color: "#062e39",
-    lineHeight: "26px",
-    fontSize: "16px",
-    fontWeight: "500",
+    padding: "36px 0",
   },
 };
