@@ -7,12 +7,12 @@ function Advantages() {
   return (
     <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.subname}>Adventages</Heading>
+        <Heading {...css.subname}>Преимущества</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>Our Adventages</Heading>
+          <Heading {...css.title}>Наши преимущества</Heading>
           <Text {...css.subtext}>
-            We make logistic shipping much easier and straighforward. Combining
-            good service and technology make everything efficient
+            Мы делаем логистическую доставку намного проще и понятнее. Сочетание
+            хорошего обслуживания и технологий делает все эффективным
           </Text>
         </Flex>
         <SimpleGrid gap={"30px"} mt={"60px"} columns={3}>
@@ -21,10 +21,10 @@ function Advantages() {
               <Heading {...css.number}>01</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Precision in Delivery</Heading>
+            <Heading {...css.name}>Точность доставки</Heading>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
           <Box {...css.item}>
@@ -32,10 +32,10 @@ function Advantages() {
               <Heading {...css.number}>02</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Tailored Solutions, Every Time</Heading>
+            <Heading {...css.name}>Индивидуальные решения каждый раз</Heading>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
           <Box {...css.item}>
@@ -43,10 +43,10 @@ function Advantages() {
               <Heading {...css.number}>03</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Cutting-Edge technology</Heading>
+            <Heading {...css.name}>Передовые технологии</Heading>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
         </SimpleGrid>
@@ -75,7 +75,7 @@ const css = {
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "450px",
+    width: "470px",
   },
   subtext: {
     fontSize: "18px",

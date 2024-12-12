@@ -19,10 +19,10 @@ function Question() {
       <Box className="container">
         <Heading {...css.subname}>{t("FAQs")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>{t("Frequently Asked Questions")}</Heading>
+          <Heading {...css.title}>{t("Часто задаваемые вопросы")}</Heading>
           <Text {...css.subtext}>
             {t(
-              "Explore our comprehensive FAQ section, designed to answer all your queries and help you plan a seamless and unforgettable journey."
+              "Изучите наш подробный раздел часто задаваемых вопросов, который ответит на все ваши вопросы и поможет вам спланировать приятное и незабываемое путешествие."
             )}
           </Text>
         </Flex>
@@ -30,28 +30,30 @@ function Question() {
           <AccordionItem {...css.items}>
             <AccordionButton p={"20px"}>
               <Box as="h2" {...css.name} flex="1" textAlign="left">
-                How do I book a trip with your travel service?
+                Как забронировать поездку с помощью вашей туристической службы?
               </Box>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel {...css.text} pb={4}>
-              You can book a trip through our website, by calling our customer
-              service hotline, or by visiting one of our offices. Simply choose
-              your destination, travel dates, and preferred
+              Вы можете забронировать поездку через наш веб-сайт, позвонив на
+              нашу горячую линию обслуживания клиентов или посетив один из наших
+              офисов. Просто выберите пункт назначения, даты поездки и
+              предпочитаемые
             </AccordionPanel>
           </AccordionItem>
 
           <AccordionItem {...css.items}>
             <AccordionButton p={"20px"}>
               <Box as="h2" {...css.name} flex="1" textAlign="left">
-                How do I book a trip with your travel service?
+                Как забронировать поездку с помощью вашей туристической службы?
               </Box>
               <AccordionIcon />
             </AccordionButton>
             <AccordionPanel {...css.text} pb={4}>
-              You can book a trip through our website, by calling our customer
-              service hotline, or by visiting one of our offices. Simply choose
-              your destination, travel dates, and preferred
+              Вы можете забронировать поездку через наш веб-сайт, позвонив на
+              нашу горячую линию обслуживания клиентов или посетив один из наших
+              офисов. Просто выберите пункт назначения, даты поездки и
+              предпочитаемые
             </AccordionPanel>
           </AccordionItem>
         </Accordion>

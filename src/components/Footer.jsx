@@ -1,12 +1,4 @@
-import {
-  border,
-  Box,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
@@ -18,7 +10,7 @@ function Footer() {
   return (
     <Box {...css.footer}>
       <Box className="container">
-        <Heading mb={'24px'}>Logo</Heading>
+        <Heading mb={"24px"}>Logo</Heading>
         <SimpleGrid {...css.box} columns={4} spacing={10}>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>INFORMATION</Heading>

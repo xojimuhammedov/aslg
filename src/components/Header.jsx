@@ -27,7 +27,7 @@ function Header() {
           <Image src={HeaderBanner} alt="HeaderBanner" />
           <Box>
             <Heading {...css.title}>
-              {t("Delivering Any Possibilities With One Cargo at a Time")}
+              {t("Доставка любых возможностей с одним грузом за раз")}
             </Heading>
             <Flex mt={"30px"} justify={"space-between"}>
               <Image {...css.image} src={HeaderOne} alt="HeaderOne" />
@@ -36,14 +36,14 @@ function Header() {
               <Image {...css.image} src={HeaderFour} alt="HeaderFour" />
               <Image {...css.image} src={HeaderFive} alt="HeaderFive" />
             </Flex>
-            <Heading {...css.name}>{t("Calculate your shipment")}</Heading>
+            <Heading {...css.name}>{t("Рассчитайте стоимость доставки")}</Heading>
             <SimpleGrid mt={"25px"} columns={2} gap={"20px"}>
-              <Input {...css.input} placeholder="From" />
-              <Input {...css.input} placeholder="Destination" />
-              <Input {...css.input} placeholder="Type" />
+              <Input {...css.input} placeholder="От" />
+              <Input {...css.input} placeholder="Место назначения" />
+              <Input {...css.input} placeholder="Тип" />
               <Input {...css.input} placeholder="kg" />
             </SimpleGrid>
-            <Button {...css.button}>{t("Calculate")}</Button>
+            <Button {...css.button}>{t("Рассчитать")}</Button>
           </Box>
         </Flex>
       </Box>

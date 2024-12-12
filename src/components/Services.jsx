@@ -7,14 +7,15 @@ function Services() {
   return (
     <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.subname}>Services</Heading>
+        <Heading {...css.subname}>Услуги</Heading>
         <Flex align={"center"} justify={"space-between"}>
           <Heading {...css.title}>
-            Discover The Full Range Of Services Wee Offer For Shipping
+            Откройте для себя полный спектр услуг, которые мы предлагаем для
+            доставки
           </Heading>
           <Text {...css.subtext}>
-            We make logistic shipping much easier and straighforward. Combining
-            good service and technology make everything efficient
+            Мы делаем логистическую доставку намного проще и понятнее. Сочетание
+            хорошего обслуживания и технологий делает все эффективным
           </Text>
         </Flex>
         <SimpleGrid mt={"60px"} gap={"30px"} columns={3}>
@@ -52,7 +53,7 @@ const css = {
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "750px",
+    width: "850px",
   },
   subtext: {
     fontSize: "18px",

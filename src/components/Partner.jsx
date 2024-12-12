@@ -8,31 +8,33 @@ function Partner() {
   return (
     <Box p={"90px 0"}>
       <Box className="container">
-        <Heading {...css.subname}>{t("Testimonials")}</Heading>
+        <Heading {...css.subname}>{t("Отзывы")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>Sound from our happy partners</Heading>
+          <Heading {...css.title}>Звук от наших счастливых партнеров</Heading>
           <Flex align={"center"} gap={"90px"}>
             <Flex flexDirection={"column"} align={"center"}>
               <Heading {...css.number}>25+</Heading>
-              <Text {...css.text}>Winning awward best shipping company</Text>
+              <Text {...css.text}>
+                Победа в номинации «Лучшая судоходная компания»
+              </Text>
             </Flex>
             <Flex flexDirection={"column"} align={"center"}>
               <Heading {...css.number}>100K+</Heading>
-              <Text {...css.text}>Happy customers around the world</Text>
+              <Text {...css.text}>Довольные клиенты по всему миру</Text>
             </Flex>
           </Flex>
         </Flex>
         <Flex mt={"60px"} justify={"space-between"}>
           <Box>
             <Text {...css.subtext}>
-              "Thank you very much Cicero for saving my time. With Cicero, the
-              delivery of goods is faster even though it is very far away. I
-              also don't need to be afraid and doubtful because Cicero provides
-              a place to store my shipping documents and makes it easier with
-              excellent real-time trackiing”
+              «Большое спасибо Cicero за экономию моего времени. С Cicero
+              доставка товаров происходит быстрее, даже если они находятся очень
+              далеко. Мне также не нужно бояться и сомневаться, потому что
+              Cicero предоставляет место для хранения моих транспортных
+              документов и упрощает отличное отслеживание в реальном времени»
             </Text>
             <Heading {...css.ceoname}>ChristinaMartha Tiahahu</Heading>
-            <Heading {...css.ceotext}>CEO of Marthapura Gold & Diamond</Heading>
+            <Heading {...css.ceotext}>Генеральный директор Marthapura Gold & Diamond</Heading>
           </Box>
           <Image src={PartnerImage} alt="Partner" />
         </Flex>

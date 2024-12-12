@@ -14,11 +14,11 @@ function About() {
         <Heading {...css.subname}>{t("About")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
           <Heading {...css.title}>
-            {t("Solution for your business need")}
+            {t("Решение для потребностей вашего бизнеса")}
           </Heading>
           <Text {...css.subtext}>
             {t(
-              "We make logistic shipping much easier and straighforward. Combining good service and technology make everything efficient"
+              "Мы делаем логистическую доставку намного проще и понятнее. Сочетание хорошего сервиса и технологий делает все эффективным"
             )}
           </Text>
         </Flex>
@@ -27,36 +27,36 @@ function About() {
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupOne} alt="GroupOne" />
               <Heading {...css.name}>
-                Your intercontinental shipping solutions
+                Ваши решения по межконтинентальным перевозкам
               </Heading>
             </Flex>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
           <Box {...css.item}>
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupTwo} alt="GroupTwo" />
               <Heading {...css.name}>
-                Your intercontinental shipping solutions
+                Ваши решения по межконтинентальным перевозкам
               </Heading>
             </Flex>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
           <Box {...css.item}>
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupThree} alt="GroupThree" />
               <Heading {...css.name}>
-                Your intercontinental shipping solutions
+                Ваши решения по межконтинентальным перевозкам
               </Heading>
             </Flex>
             <Text {...css.text}>
-              With enhanced supply chain solution will accelerate your business
-              while also driving efficiency
+              Благодаря улучшенному решению цепочки поставок ваш бизнес
+              ускорится, а также повысится эффективность
             </Text>
           </Box>
         </SimpleGrid>
