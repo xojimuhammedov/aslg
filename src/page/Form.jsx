@@ -10,10 +10,6 @@ function Form() {
         <Flex gap={"84px"}>
           <Box>
             <Heading {...css.title}>{t("Get in touch")}</Heading>
-            <Text {...css.text}>
-              Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
-              leo molestie vel, ornare non id blandit netus.
-            </Text>
             <input
               className="form-input"
               type="text"
@@ -43,7 +39,7 @@ function Form() {
             <Button {...css.button}>{t("Рассчитать")}</Button>
           </Box>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.641822092032!2d69.2459091758749!3d41.316654971308886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b40d847941d%3A0x5765a18b352df71e!2sTashkent%20City%20Park!5e0!3m2!1sen!2s!4v1733997308438!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1122.7453673896546!2d76.94655385902395!3d43.264988304663966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2s!4v1734266965995!5m2!1sen!2s"
             className="form-map"
             style={{ border: "0" }}
             allowFullScreen=""
