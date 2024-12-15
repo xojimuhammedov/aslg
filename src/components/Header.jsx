@@ -29,19 +29,28 @@ function Header() {
             <Heading {...css.title}>
               {t("Доставка любых возможностей с одним грузом за раз")}
             </Heading>
-            <Flex mt={"30px"} justify={"space-between"}>
+            <Flex mt={"20px"} justify={"space-between"}>
               <Image {...css.image} src={HeaderOne} alt="HeaderOne" />
               <Image {...css.image} src={HeaderTwo} alt="HeaderTwo" />
               <Image {...css.image} src={HeaderThree} alt="HeaderThree" />
               <Image {...css.image} src={HeaderFour} alt="HeaderFour" />
               <Image {...css.image} src={HeaderFive} alt="HeaderFive" />
             </Flex>
-            <Heading {...css.name}>{t("Рассчитайте стоимость доставки")}</Heading>
-            <SimpleGrid mt={"25px"} columns={2} gap={"20px"}>
-              <Input {...css.input} placeholder="От" />
-              <Input {...css.input} placeholder="Место назначения" />
-              <Input {...css.input} placeholder="Тип" />
-              <Input {...css.input} placeholder="kg" />
+            <Heading {...css.name}>
+              {t("Рассчитайте стоимость доставки")}
+            </Heading>
+            <SimpleGrid mt={"15px"} columns={2} gap={"20px"}>
+              <Input {...css.input} placeholder={t("Откуда")} />
+              <Input {...css.input} placeholder={t("Куда")} />
+            </SimpleGrid>
+            <Input
+              mt={"15px"}
+              {...css.input}
+              placeholder={t("Описание груза (вес, объем)")}
+            />
+            <SimpleGrid mt={"15px"} columns={2} gap={"20px"}>
+              <Input {...css.input} placeholder={t("Ваше имя")} />
+              <Input {...css.input} placeholder={t("Ваш телефон")} />
             </SimpleGrid>
             <Button {...css.button}>{t("Рассчитать")}</Button>
           </Box>
@@ -68,7 +77,7 @@ const css = {
     lineHeight: "normal",
     fontWeight: "500",
     color: "rgba(0, 0, 0, 1)",
-    marginTop: "60px",
+    marginTop: "30px",
   },
   input: {
     border: "1px solid #9C9C9C",

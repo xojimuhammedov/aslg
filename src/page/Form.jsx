@@ -9,7 +9,7 @@ function Form() {
       <Box {...css.form} className="container">
         <Flex gap={"84px"}>
           <Box>
-            <Heading {...css.title}>Get in touch </Heading>
+            <Heading {...css.title}>{t("Get in touch")}</Heading>
             <Text {...css.text}>
               Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
               leo molestie vel, ornare non id blandit netus.
@@ -17,18 +17,26 @@ function Form() {
             <input
               className="form-input"
               type="text"
-              placeholder="Contact name"
+              placeholder={t("Ваше имя")}
             />
-            <input className="form-input" type="text" placeholder="Street" />
-            <input className="form-input" type="text" placeholder="City" />
-            <input className="form-input" type="email" placeholder="E-mail" />
+            <input
+              className="form-input"
+              type="text"
+              placeholder={t("Country")}
+            />
+            <input className="form-input" type="text" placeholder={t("City")} />
+            <input
+              className="form-input"
+              type="email"
+              placeholder={t("E-mail")}
+            />
             <input
               className="form-input"
               type="tell"
-              placeholder="Contact Phone"
+              placeholder={t("Ваш телефон")}
             />
             <textarea
-              placeholder="Let’s talk about your idea"
+              placeholder={t("Let’s talk about your idea")}
               name=""
               className="form-text"
               id=""></textarea>

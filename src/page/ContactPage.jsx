@@ -11,7 +11,7 @@ function ContactPage() {
       <Box p={"30px 0"}>
         <Box className="container">
           <Image src={ContactBanner} />
-          <Heading {...css.subname}>{t("About")}</Heading>
+          <Heading {...css.subname}>{t("Contact")}</Heading>
           <Flex align={"center"} justify={"space-between"}>
             <Heading {...css.title}>{t("Reach Out to Us Anytime")}</Heading>
             <Text {...css.subtext}>

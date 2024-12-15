@@ -16,11 +16,7 @@ function About() {
           <Heading {...css.title}>
             {t("Решение для потребностей вашего бизнеса")}
           </Heading>
-          <Text {...css.subtext}>
-            {t(
-              "Мы делаем логистическую доставку намного проще и понятнее. Сочетание хорошего сервиса и технологий делает все эффективным"
-            )}
-          </Text>
+          <Text {...css.subtext}>{t("about_text")}</Text>
         </Flex>
         <SimpleGrid gap={"30px"} mt={"60px"} columns={3}>
           <Box {...css.item}>

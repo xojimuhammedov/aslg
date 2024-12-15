@@ -2,8 +2,10 @@ import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 import ArrowDown from "../assets/arrow-down-02.svg";
+import { useTranslation } from "react-i18next";
 
 function Advantages() {
+  const { t } = useTranslation();
   return (
     <Box {...css.about}>
       <Box className="container">
@@ -11,8 +13,9 @@ function Advantages() {
         <Flex align={"center"} justify={"space-between"}>
           <Heading {...css.title}>Наши преимущества</Heading>
           <Text {...css.subtext}>
-            Мы делаем логистическую доставку намного проще и понятнее. Сочетание
-            хорошего обслуживания и технологий делает все эффективным
+            Сотрудничество с нами — это гарантия того, что ваш груз окажется в
+            нужном месте в нужное время, а вы получите высокий уровень сервиса и
+            уверенность в результате.
           </Text>
         </Flex>
         <SimpleGrid gap={"30px"} mt={"60px"} columns={3}>
@@ -21,33 +24,48 @@ function Advantages() {
               <Heading {...css.number}>01</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Точность доставки</Heading>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Heading {...css.name}>{t("advantages_title7")}</Heading>
+            <Text {...css.text}>{t("advantages_text7")}</Text>
           </Box>
           <Box {...css.item}>
             <Flex mb={"48px"} align={"center"} justify={"space-between"}>
               <Heading {...css.number}>02</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Индивидуальные решения каждый раз</Heading>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Heading {...css.name}>{t("advantages_title2")}</Heading>
+            <Text {...css.text}>{t("advantages_text2")}</Text>
           </Box>
           <Box {...css.item}>
             <Flex mb={"48px"} align={"center"} justify={"space-between"}>
               <Heading {...css.number}>03</Heading>
               <Image src={ArrowDown} alt="ArrowDown" />
             </Flex>
-            <Heading {...css.name}>Передовые технологии</Heading>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Heading {...css.name}>{t("advantages_title3")}</Heading>
+            <Text {...css.text}>{t("advantages_text3")}</Text>
+          </Box>
+          <Box {...css.item}>
+            <Flex mb={"48px"} align={"center"} justify={"space-between"}>
+              <Heading {...css.number}>04</Heading>
+              <Image src={ArrowDown} alt="ArrowDown" />
+            </Flex>
+            <Heading {...css.name}>{t("advantages_title4")}</Heading>
+            <Text {...css.text}>{t("advantages_text4")}</Text>
+          </Box>
+          <Box {...css.item}>
+            <Flex mb={"48px"} align={"center"} justify={"space-between"}>
+              <Heading {...css.number}>05</Heading>
+              <Image src={ArrowDown} alt="ArrowDown" />
+            </Flex>
+            <Heading {...css.name}>{t("advantages_title5")}</Heading>
+            <Text {...css.text}>{t("advantages_text5")}</Text>
+          </Box>
+          <Box {...css.item}>
+            <Flex mb={"48px"} align={"center"} justify={"space-between"}>
+              <Heading {...css.number}>06</Heading>
+              <Image src={ArrowDown} alt="ArrowDown" />
+            </Flex>
+            <Heading {...css.name}>{t("advantages_title6")}</Heading>
+            <Text {...css.text}>{t("advantages_text6")}</Text>
           </Box>
         </SimpleGrid>
       </Box>
@@ -93,14 +111,14 @@ const css = {
   },
   text: {
     color: "#000",
-    fontSize: "20px",
+    fontSize: "18px",
     lineHeight: "normal",
     fontWeight: "300",
-    marginTop: "6px",
+    marginTop: "12px",
     letterSpacing: "0.2px",
   },
   name: {
-    fontSize: "35px",
+    fontSize: "28px",
     lineHeight: "normal",
     fontWeight: "500",
     color: "#000000",

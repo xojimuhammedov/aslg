@@ -11,7 +11,7 @@ function TariffPage() {
       <Box p={"30px 0"}>
         <Box className="container">
           <Image src={ContactBanner} />
-          <Heading {...css.subname}>{t("Tariffs")}</Heading>
+          <Heading {...css.subname}>{t("Tariff")}</Heading>
           <Flex align={"center"} justify={"space-between"}>
             <Heading {...css.title}>{t("Flexible Pricing Options")}</Heading>
             <Text {...css.subtext}>
@@ -44,7 +44,7 @@ const css = {
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "546px",
+    width: "560px",
   },
   subtext: {
     fontSize: "18px",

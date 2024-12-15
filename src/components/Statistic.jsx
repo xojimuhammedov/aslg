@@ -1,22 +1,24 @@
 import { Box, Flex, Heading, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Statistic() {
+  const { t } = useTranslation();
   return (
     <Box {...css.statistic}>
       <Box className="container">
         <SimpleGrid columns={3}>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>12+</Heading>
-            <Text {...css.text}>Year Services</Text>
+            <Text {...css.text}>{t("Year Services")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>+20K</Heading>
-            <Text {...css.text}>Cargo Delivered</Text>
+            <Text {...css.text}>{t("Cargo Delivered")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>500</Heading>
-            <Text {...css.text}>Total Cargo</Text>
+            <Text {...css.text}>{t("Total Cargo")}</Text>
           </Flex>
         </SimpleGrid>
         <hr

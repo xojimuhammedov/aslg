@@ -19,10 +19,10 @@ function Navbar() {
             <Link to={"/"}>
               <Text {...css.link}>{t("Services")}</Text>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/tariff"}>
               <Text {...css.link}>{t("Tariff")}</Text>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/contact"}>
               <Text {...css.link}>{t("Contact")}</Text>
             </Link>
             <Language />

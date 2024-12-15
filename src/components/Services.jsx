@@ -2,16 +2,19 @@ import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 import ServiceImage from "../assets/services.png";
+import { useTranslation } from "react-i18next";
 
 function Services() {
+  const { t } = useTranslation();
   return (
     <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.subname}>Услуги</Heading>
+        <Heading {...css.subname}>{t("Services")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
           <Heading {...css.title}>
-            Откройте для себя полный спектр услуг, которые мы предлагаем для
-            доставки
+            {t(
+              "Откройте для себя полный спектр услуг, которые мы предлагаем для доставки"
+            )}
           </Heading>
           <Text {...css.subtext}>
             Мы делаем логистическую доставку намного проще и понятнее. Сочетание

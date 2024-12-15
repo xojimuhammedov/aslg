@@ -22,25 +22,24 @@ function TarifForm() {
   return (
     <Box pb={"45px"}>
       <Box className="container">
-        <Heading {...css.title}>Calculate your shipment</Heading>
+        <Heading {...css.title}>{t("Calculate your shipment")}</Heading>
         <SimpleGrid alignItems={"center"} columns={2} gap={"48px"}>
           <Box>
             <SimpleGrid gap={"24px"} columns={2}>
-              <Input {...css.input} placeholder="От" />
-              <Input {...css.input} placeholder="Место назначения" />
+              <Input {...css.input} placeholder={t("Откуда")} />
+              <Input {...css.input} placeholder={t("Куда")} />
+            </SimpleGrid>
+            <Textarea
+              placeholder={t("Описание груза (вес, объем)")}
+              {...css.inputs}
+            />
+            <SimpleGrid gap={"24px"} columns={2}>
+              <Input {...css.input} placeholder={t("Ваше имя")} />
+              <Input {...css.input} placeholder={t("Ваш телефон")} />
             </SimpleGrid>
             <SimpleGrid gap={"24px"} columns={2}>
-              <Input {...css.input} placeholder="От" />
-              <Input {...css.input} placeholder="Место назначения" />
-            </SimpleGrid>
-            <Textarea placeholder="Cargo information" {...css.inputs} />
-            <SimpleGrid gap={"24px"} columns={2}>
-              <Input {...css.input} placeholder="От" />
-              <Input {...css.input} placeholder="Место назначения" />
-            </SimpleGrid>
-            <SimpleGrid gap={"24px"} columns={2}>
-              <Input {...css.input} placeholder="От" />
-              <Input {...css.input} placeholder="Место назначения" />
+              <Input {...css.input} placeholder={t("E-mail")} />
+              <Input {...css.input} placeholder={t("Country")} />
             </SimpleGrid>
             <Button {...css.button}>{t("Рассчитать")}</Button>
           </Box>
@@ -49,41 +48,47 @@ function TarifForm() {
               <Box {...css.item}>
                 <Flex align={"center"} gap={"10px"}>
                   <Image src={IconOne} />
-                  <Heading {...css.name}>Address delivery</Heading>
+                  <Heading {...css.name}>{t("Address delivery")}</Heading>
                 </Flex>
                 <Text {...css.text}>
-                  Delivery to the recipient's address with a convenient time
-                  specified
+                  {t(
+                    "Delivery to the recipient's address with a convenient time specified"
+                  )}
                 </Text>
               </Box>
               <Box {...css.item}>
                 <Flex align={"center"} gap={"10px"}>
                   <Image src={IconTwo} />
-                  <Heading {...css.name}>Address delivery</Heading>
+                  <Heading {...css.name}>{t("Собственный автопарк")}</Heading>
                 </Flex>
                 <Text {...css.text}>
-                  Delivery to the recipient's address with a convenient time
-                  specified
+                  {t(
+                    "Предоставляем широкий спектр услуг в перевозке грузов различных габаритов."
+                  )}
                 </Text>
               </Box>
               <Box {...css.item}>
                 <Flex align={"center"} gap={"10px"}>
                   <Image src={IconThree} />
-                  <Heading {...css.name}>One way payment</Heading>
+                  <Heading {...css.name}>{t("ОПЛАТА В ОДИН КОНЕЦ")}</Heading>
                 </Flex>
                 <Text {...css.text}>
-                  You pay the cost of one-way transportation, you do not pay.
+                  {t(
+                    "Вы оплачиваете стоимость перевозки в один конец, не платите за обратную дорогу"
+                  )}
                 </Text>
               </Box>
               <Box {...css.item}>
                 <Flex align={"center"} gap={"10px"}>
                   <Image src={IconFour} />
                   <Heading {...css.name}>
-                    Delivery of cargo just in minute
+                    {t("Delivery of cargo just in minute")}
                   </Heading>
                 </Flex>
                 <Text {...css.text}>
-                  We guarantee high-quality delivery of cargo exactly on time.
+                  {t(
+                    "Мы гарантируем качественную доставку груза точно в указанный срок"
+                  )}
                 </Text>
               </Box>
             </SimpleGrid>
