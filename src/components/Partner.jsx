@@ -10,7 +10,7 @@ function Partner() {
       <Box className="container">
         <Heading {...css.subname}>{t("Отзывы")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>Звук от наших счастливых партнеров</Heading>
+          <Heading {...css.title}>{t("Звук от наших счастливых партнеров")}</Heading>
           <Flex align={"center"} gap={"90px"}>
             <Flex flexDirection={"column"} align={"center"}>
               <Heading {...css.number}>25+</Heading>

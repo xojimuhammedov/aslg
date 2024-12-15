@@ -6,11 +6,9 @@ import {
   Image,
   Input,
   SimpleGrid,
-  Text,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import HeaderBanner from "../assets/header-banner.png";
+import HeaderBanner from "../assets/header1.webp";
 
 import HeaderOne from "../assets/Group 1.svg";
 import HeaderTwo from "../assets/Group 3.svg";
@@ -24,7 +22,7 @@ function Header() {
     <Box pb={"168px"}>
       <Box className="container">
         <Flex gap={"109px"}>
-          <Image src={HeaderBanner} alt="HeaderBanner" />
+          <Image {...css.images} src={HeaderBanner} alt="HeaderBanner" />
           <Box>
             <Heading {...css.title}>
               {t("Доставка любых возможностей с одним грузом за раз")}
@@ -98,5 +96,11 @@ const css = {
     _hover: {
       background: "#0563AB",
     },
+  },
+  images: {
+    height: "720px",
+    width: "650px",
+    objectFit: "cover",
+    borderRadius: "10px",
   },
 };

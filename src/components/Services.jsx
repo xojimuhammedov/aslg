@@ -1,11 +1,10 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-
-import ServiceImage from "../assets/services.png";
 import { useTranslation } from "react-i18next";
+import { serviceData } from "./../data";
 
 function Services() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <Box {...css.about}>
       <Box className="container">
@@ -21,16 +20,13 @@ function Services() {
             хорошего обслуживания и технологий делает все эффективным
           </Text>
         </Flex>
-        <SimpleGrid mt={"60px"} gap={"30px"} columns={3}>
-          <Box>
-            <Image src={ServiceImage} alt="ServiceImage" />
-          </Box>
-          <Box>
-            <Image src={ServiceImage} alt="ServiceImage" />
-          </Box>
-          <Box>
-            <Image src={ServiceImage} alt="ServiceImage" />
-          </Box>
+        <SimpleGrid mt={"60px"} gap={"18px"} columns={4}>
+          {serviceData?.map((item, index) => (
+            <Box {...css.item} key={index}>
+              <Image {...css.image} src={item.image} alt="ServiceImage" />
+              <Heading {...css.name}>{item[`title_${i18n?.language}`]}</Heading>
+            </Box>
+          ))}
         </SimpleGrid>
       </Box>
     </Box>
@@ -65,5 +61,25 @@ const css = {
     color: "#000000",
     letterSpacing: "0.18px",
     width: "400px",
+  },
+  image: {
+    height: "450px",
+    width: "100%",
+    objectFit: "cover",
+    borderRadius: "20px",
+  },
+  item: {
+    position: "relative",
+    overflow: "hidden",
+  },
+  name: {
+    position: "absolute",
+    zIndex: "999",
+    bottom: "50px",
+    left: "20px",
+    fontSize: "25px",
+    lineHeight: "normal",
+    fontWeight: "500",
+    color: "#FFFFFF",
   },
 };

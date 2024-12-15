@@ -1,7 +1,7 @@
-import ServiceOne from "./assets/service-1.webp";
-import ServiceTwo from "./assets/service-2.avif";
-import ServiceThree from "./assets/service-3.jpg";
-import ServiceFour from "./assets/service-4.jpeg";
+import ServiceOne from "./assets/service-1.avif";
+import ServiceTwo from "./assets/service-2.png";
+import ServiceThree from "./assets/service-3.webp";
+import ServiceFour from "./assets/service-4.jpg";
 
 export const serviceData = [
   {

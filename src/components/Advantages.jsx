@@ -9,13 +9,11 @@ function Advantages() {
   return (
     <Box {...css.about}>
       <Box className="container">
-        <Heading {...css.subname}>Преимущества</Heading>
+        <Heading {...css.subname}>{t("Преимущества")}</Heading>
         <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>Наши преимущества</Heading>
+          <Heading {...css.title}>{t("Наши преимущества")}</Heading>
           <Text {...css.subtext}>
-            Сотрудничество с нами — это гарантия того, что ваш груз окажется в
-            нужном месте в нужное время, а вы получите высокий уровень сервиса и
-            уверенность в результате.
+            {t("advantagesText")}
           </Text>
         </Flex>
         <SimpleGrid gap={"30px"} mt={"60px"} columns={3}>

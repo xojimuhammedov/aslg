@@ -58,7 +58,9 @@ function Footer() {
             <Link target="_blank" href={"mailto:sultanbek.asilbek@gmail.com"}>
               <Text {...css.link}>sultanbek.asilbek@gmail.com</Text>
             </Link>
-            <Link href={"/"}>
+            <Link
+              target="_blank"
+              href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
               <Text {...css.link}>
                 Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр
                 Жетысу, офис 512
