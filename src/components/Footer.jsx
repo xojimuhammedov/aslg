@@ -1,6 +1,14 @@
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  Link,
+} from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link as Alink } from "react-router-dom";
 
 import Instagram from "../assets/instagram.svg";
 import Telegram from "../assets/tg.svg";
@@ -13,58 +21,60 @@ function Footer() {
         <Heading mb={"24px"}>Logo</Heading>
         <SimpleGrid {...css.box} columns={4} spacing={10}>
           <Flex flexDirection={"column"}>
-            <Heading {...css.title}>INFORMATION</Heading>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
+            <Heading {...css.title}>{t("INFORMATION")}</Heading>
+            <Alink to={"/contact"}>
+              <Text {...css.link}>{t("Contact")}</Text>
+            </Alink>
+            <Link href={"/"}>
+              <Text {...css.link}>{t("About Us")}</Text>
             </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>About Us</Text>
+            <Link href={"/"}>
+              <Text {...css.link}>{t("FAQs")}</Text>
             </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>FAQs</Text>
+            <Alink to={"/tariff"}>
+              <Text {...css.link}>{t("Tariff")}</Text>
+            </Alink>
+          </Flex>
+          <Flex flexDirection={"column"}>
+            <Heading {...css.title}>{t("SERVICES")}</Heading>
+            <Alink to={"/"}>
+              <Text {...css.link}>{t("Международные грузоперевозки")}</Text>
+            </Alink>
+            <Alink to={"/"}>
+              <Text {...css.link}>{t("Складирование и обработка грузов")}</Text>
+            </Alink>
+            <Alink to={"/"}>
+              <Text {...css.link}>{t("Таможенное оформление")}</Text>
+            </Alink>
+            <Alink to={"/"}>
+              <Text {...css.link}>{t("Логистический консалтинг")}</Text>
+            </Alink>
+          </Flex>
+          <Flex flexDirection={"column"}>
+            <Heading {...css.title}>{t("Contact")}</Heading>
+            <Link target="_blank" href={"tel:+77753378595"}>
+              <Text {...css.link}>+7 775 337 85 95</Text>
             </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Choose a Service</Text>
+            <Link target="_blank" href={"mailto:sultanbek.asilbek@gmail.com"}>
+              <Text {...css.link}>sultanbek.asilbek@gmail.com</Text>
+            </Link>
+            <Link href={"/"}>
+              <Text {...css.link}>
+                Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр
+                Жетысу, офис 512
+              </Text>
             </Link>
           </Flex>
           <Flex flexDirection={"column"}>
-            <Heading {...css.title}>SERVICES</Heading>
-            <Link to={"/"}>
-              <Text {...css.link}>Update Personal Information</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Special Offers</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>SMS Services</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
-            </Link>
-          </Flex>
-          <Flex flexDirection={"column"}>
-            <Heading {...css.title}>INTERNET</Heading>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
-            </Link>
-            <Link to={"/"}>
-              <Text {...css.link}>Contact Us</Text>
-            </Link>
-          </Flex>
-          <Flex flexDirection={"column"}>
-            <Heading {...css.title}>FOLLOW US ON SOCIAL MEDIA</Heading>
-            <Link to={"/"}>
-              <Text {...css.link}>Join Us</Text>
-            </Link>
+            <Heading {...css.title}>{t("FOLLOW US ON SOCIAL MEDIA")}</Heading>
+            <Text {...css.link}>{t("Join Us")}</Text>
             <Flex gap={"12px"}>
-              <Image src={Instagram} alt="Instagram" />
-              <Image src={Telegram} alt="Telegram" />
+              <Link href="/">
+                <Image src={Instagram} alt="Instagram" />
+              </Link>
+              <Link href="/">
+                <Image src={Telegram} alt="Telegram" />
+              </Link>
             </Flex>
           </Flex>
         </SimpleGrid>
