@@ -5,9 +5,14 @@ import { useTranslation } from "react-i18next";
 function Form() {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Box pb={{ base: "36px" }}>
       <Box {...css.form} className="container">
-        <Flex gap={"84px"}>
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          gap={{
+            base: "36px",
+            lg: "84px",
+          }}>
           <Box>
             <Heading {...css.title}>{t("Get in touch")}</Heading>
             <input
@@ -57,7 +62,10 @@ const css = {
   form: {
     background: "#F6F6F6",
     borderRadius: "10px",
-    padding: "40px",
+    padding: {
+      base: "10px",
+      lg: "40px",
+    },
   },
   button: {
     background: "#0563AB",
@@ -75,7 +83,10 @@ const css = {
     },
   },
   title: {
-    fontSize: "46px",
+    fontSize: {
+      base: "35px",
+      lg: "46px",
+    },
     lineHeight: "normal",
     letterSpacing: "0.46px",
     color: "#000000",

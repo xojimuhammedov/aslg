@@ -41,6 +41,10 @@ const css = {
     lineHeight: "22px",
     fontWeight: "500",
     color: "rgba(0, 0, 0, 1)",
+    display: {
+      base: "none",
+      lg: "block",
+    },
   },
   navbar: {
     padding: "36px 0",

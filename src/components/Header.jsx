@@ -19,9 +19,14 @@ import HeaderFive from "../assets/Group 10.svg";
 function Header() {
   const { t } = useTranslation();
   return (
-    <Box pb={"168px"}>
+    <Box pb={{ base: "36px", lg: "168px" }}>
       <Box className="container">
-        <Flex gap={"109px"}>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          gap={{
+            base: "36px",
+            lg: "109px",
+          }}>
           <Image {...css.images} src={HeaderBanner} alt="HeaderBanner" />
           <Box>
             <Heading {...css.title}>
@@ -37,7 +42,7 @@ function Header() {
             <Heading {...css.name}>
               {t("Рассчитайте стоимость доставки")}
             </Heading>
-            <SimpleGrid mt={"15px"} columns={2} gap={"20px"}>
+            <SimpleGrid mt={"15px"} columns={{ base: 1, lg: 2 }} gap={"20px"}>
               <Input {...css.input} placeholder={t("Откуда")} />
               <Input {...css.input} placeholder={t("Куда")} />
             </SimpleGrid>
@@ -46,7 +51,7 @@ function Header() {
               {...css.input}
               placeholder={t("Описание груза (вес, объем)")}
             />
-            <SimpleGrid mt={"15px"} columns={2} gap={"20px"}>
+            <SimpleGrid mt={"15px"} columns={{ base: 1, lg: 2 }} gap={"20px"}>
               <Input {...css.input} placeholder={t("Ваше имя")} />
               <Input {...css.input} placeholder={t("Ваш телефон")} />
             </SimpleGrid>
@@ -62,7 +67,10 @@ export default Header;
 
 const css = {
   title: {
-    fontSize: "68px",
+    fontSize: {
+      base: "40px",
+      lg: "68px",
+    },
     lineHeight: "normal",
     fontWeight: "500",
     color: "rgba(0, 0, 0, 1)",
@@ -71,7 +79,10 @@ const css = {
     cursor: "pointer",
   },
   name: {
-    fontSize: "25px",
+    fontSize: {
+      base: "22px",
+      lg: "25px",
+    },
     lineHeight: "normal",
     fontWeight: "500",
     color: "rgba(0, 0, 0, 1)",
@@ -98,8 +109,14 @@ const css = {
     },
   },
   images: {
-    height: "720px",
-    width: "650px",
+    height: {
+      base: "450px",
+      lg: "720px",
+    },
+    width: {
+      base: "100%",
+      lg: "650px",
+    },
     objectFit: "cover",
     borderRadius: "10px",
   },

@@ -23,9 +23,14 @@ function TarifForm() {
     <Box pb={"45px"}>
       <Box className="container">
         <Heading {...css.title}>{t("Calculate your shipment")}</Heading>
-        <SimpleGrid alignItems={"center"} columns={2} gap={"48px"}>
+        <SimpleGrid
+          alignItems={"center"}
+          columns={{ base: 1, lg: 2 }}
+          gap={"48px"}>
           <Box>
-            <SimpleGrid gap={"24px"} columns={2}>
+            <SimpleGrid
+              gap={{ base: "0", lg: "24px" }}
+              columns={{ base: 1, lg: 2 }}>
               <Input {...css.input} placeholder={t("Откуда")} />
               <Input {...css.input} placeholder={t("Куда")} />
             </SimpleGrid>
@@ -33,18 +38,22 @@ function TarifForm() {
               placeholder={t("Описание груза (вес, объем)")}
               {...css.inputs}
             />
-            <SimpleGrid gap={"24px"} columns={2}>
+            <SimpleGrid
+              gap={{ base: "0", lg: "24px" }}
+              columns={{ base: 1, lg: 2 }}>
               <Input {...css.input} placeholder={t("Ваше имя")} />
               <Input {...css.input} placeholder={t("Ваш телефон")} />
             </SimpleGrid>
-            <SimpleGrid gap={"24px"} columns={2}>
+            <SimpleGrid
+              gap={{ base: "0", lg: "24px" }}
+              columns={{ base: 1, lg: 2 }}>
               <Input {...css.input} placeholder={t("E-mail")} />
               <Input {...css.input} placeholder={t("Country")} />
             </SimpleGrid>
             <Button {...css.button}>{t("Рассчитать")}</Button>
           </Box>
           <Box>
-            <SimpleGrid gap={"24px"} columns={2}>
+            <SimpleGrid gap={"24px"} columns={{ base: 1, lg: 2 }}>
               <Box {...css.item}>
                 <Flex align={"center"} gap={"10px"}>
                   <Image src={IconOne} />

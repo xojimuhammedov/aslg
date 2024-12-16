@@ -9,7 +9,10 @@ function Services() {
     <Box {...css.about}>
       <Box className="container">
         <Heading {...css.subname}>{t("Services")}</Heading>
-        <Flex align={"center"} justify={"space-between"}>
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          align={"center"}
+          justify={"space-between"}>
           <Heading {...css.title}>
             {t(
               "Откройте для себя полный спектр услуг, которые мы предлагаем для доставки"
@@ -20,7 +23,10 @@ function Services() {
             хорошего обслуживания и технологий делает все эффективным
           </Text>
         </Flex>
-        <SimpleGrid mt={"60px"} gap={"18px"} columns={4}>
+        <SimpleGrid
+          mt={"60px"}
+          gap={"18px"}
+          columns={{ base: 1, sm: 2, md: 3, lg: 4 }}>
           {serviceData?.map((item, index) => (
             <Box {...css.item} key={index}>
               <Image {...css.image} src={item.image} alt="ServiceImage" />
@@ -37,7 +43,10 @@ export default Services;
 
 const css = {
   about: {
-    padding: "90px 0",
+    padding: {
+      base: "36px 0",
+      lg: "90px 0",
+    },
   },
   subname: {
     color: "#0563AB",
@@ -47,20 +56,35 @@ const css = {
     marginBottom: "30px",
   },
   title: {
-    fontSize: "65px",
-    lineHeight: "80px",
+    fontSize: {
+      base: "30px",
+      sm: "65px",
+    },
+    lineHeight: {
+      base: "40px",
+      sm: "80px",
+    },
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "850px",
+    width: {
+      base: "100%",
+      lg: "850px",
+    },
   },
   subtext: {
-    fontSize: "18px",
+    fontSize: {
+      base: "16px",
+      lg: "18px",
+    },
     lineHeight: "28px",
     fontWeight: "400",
     color: "#000000",
     letterSpacing: "0.18px",
-    width: "400px",
+    width: {
+      base: "100%",
+      lg: "400px",
+    },
   },
   image: {
     height: "450px",

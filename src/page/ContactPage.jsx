@@ -8,11 +8,18 @@ function ContactPage() {
   const { t } = useTranslation();
   return (
     <>
-      <Box p={"30px 0"}>
+      <Box
+        p={{
+          base: "18px 0",
+          lg: "30px 0",
+        }}>
         <Box className="container">
           <Image src={ContactBanner} />
           <Heading {...css.subname}>{t("Contact")}</Heading>
-          <Flex align={"center"} justify={"space-between"}>
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            align={"center"}
+            justify={"space-between"}>
             <Heading {...css.title}>{t("Reach Out to Us Anytime")}</Heading>
             <Text {...css.subtext}>
               {t(
@@ -39,19 +46,34 @@ const css = {
     marginTop: "60px",
   },
   title: {
-    fontSize: "65px",
-    lineHeight: "80px",
+    fontSize: {
+      base: "30px",
+      sm: "65px",
+    },
+    lineHeight: {
+      base: "40px",
+      sm: "80px",
+    },
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "546px",
+    width: {
+      base: "100%",
+      lg: "546px",
+    },
   },
   subtext: {
-    fontSize: "18px",
+    fontSize: {
+      base: "16px",
+      lg: "18px",
+    },
     lineHeight: "28px",
     fontWeight: "400",
     color: "#000000",
     letterSpacing: "0.18px",
-    width: "400px",
+    width: {
+      base: "100%",
+      lg: "400px",
+    },
   },
 };

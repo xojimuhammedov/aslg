@@ -19,7 +19,10 @@ function Footer() {
     <Box {...css.footer}>
       <Box className="container">
         <Heading mb={"24px"}>Logo</Heading>
-        <SimpleGrid {...css.box} columns={4} spacing={10}>
+        <SimpleGrid
+          {...css.box}
+          columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+          spacing={10}>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("INFORMATION")}</Heading>
             <Alink to={"/contact"}>

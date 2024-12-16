@@ -18,7 +18,10 @@ function Question() {
     <Box {...css.about}>
       <Box className="container">
         <Heading {...css.subname}>{t("FAQs")}</Heading>
-        <Flex align={"center"} justify={"space-between"}>
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          align={"center"}
+          justify={"space-between"}>
           <Heading {...css.title}>{t("Часто задаваемые вопросы")}</Heading>
           <Text {...css.subtext}>
             {t(
@@ -148,7 +151,10 @@ export default Question;
 
 const css = {
   about: {
-    padding: "90px 0",
+    padding: {
+      base: "36px 0",
+      lg: "90px 0",
+    },
   },
   subname: {
     color: "#0563AB",
@@ -158,40 +164,67 @@ const css = {
     marginBottom: "30px",
   },
   title: {
-    fontSize: "65px",
-    lineHeight: "80px",
+    fontSize: {
+      base: "30px",
+      sm: "65px",
+    },
+    lineHeight: {
+      base: "40px",
+      sm: "80px",
+    },
     fontWeight: "600",
     letterSpacing: "0.65px",
     color: "#000000",
-    width: "546px",
+    width: {
+      base: "100%",
+      lg: "546px",
+    },
   },
   subtext: {
-    fontSize: "18px",
+    fontSize: {
+      base: "16px",
+      lg: "18px",
+    },
     lineHeight: "28px",
     fontWeight: "400",
     color: "#000000",
     letterSpacing: "0.18px",
-    width: "400px",
+    width: {
+      base: "100%",
+      lg: "400px",
+    },
   },
   items: {
     border: "1.5px solid rgba(162, 162, 162, 0.60)",
     borderRadius: "10px",
-    width: "1024px",
+    width: {
+      base: "100%",
+      lg: "1024px",
+    },
     margin: "24px 0",
   },
   name: {
     color: "#000000",
-    fontSize: "24px",
+    fontSize: {
+      base: "18px",
+      lg: "24px",
+    },
     lineHeight: "normal",
     letterSpacing: "0.24px",
     fontWeight: "500",
   },
   text: {
     color: "#676767",
-    fontSize: "20px",
+    fontSize: {
+      base: "16px",
+      lg: "20px",
+    },
     lineHeight: "normal",
     letterSpacing: "0.2px",
     fontWeight: "400",
-    width: "600px",
+    width: {
+      base: "100%",
+      lg: "546px",
+    },
   },
 };
