@@ -77,7 +77,10 @@ const css = {
     },
   },
   banner: {
-    height: "650px",
+    height: {
+      base: "450px",
+      lg: "650px",
+    },
     width: "100%",
     borderRadius: "12px",
     objectFit: "cover",

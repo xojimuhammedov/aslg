@@ -6,12 +6,22 @@ import PartnerImage from "../assets/partner.png";
 function Partner() {
   const { t } = useTranslation();
   return (
-    <Box p={"90px 0"}>
+    <Box p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.subname}>{t("Отзывы")}</Heading>
-        <Flex align={"center"} justify={"space-between"}>
-          <Heading {...css.title}>{t("Звук от наших счастливых партнеров")}</Heading>
-          <Flex align={"center"} gap={"90px"}>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          align={"center"}
+          justify={"space-between"}>
+          <Heading {...css.title}>
+            {t("Звук от наших счастливых партнеров")}
+          </Heading>
+          <Flex
+            flexWrap={{ base: "wrap", lg: "nowrap" }}
+            align={"center"}
+            mt={{ base: "18px", lg: "0px" }}
+            justify={{ base: "center", lg: "baseline" }}
+            gap={{ base: "24px", lg: "90px" }}>
             <Flex flexDirection={"column"} align={"center"}>
               <Heading {...css.number}>25+</Heading>
               <Text {...css.text}>
@@ -24,7 +34,11 @@ function Partner() {
             </Flex>
           </Flex>
         </Flex>
-        <Flex mt={"60px"} justify={"space-between"}>
+        <Flex
+          flexDirection={{ base: "column", lg: "row" }}
+          mt={{ base: "24px", lg: "60px" }}
+          gap={"12px"}
+          justify={"space-between"}>
           <Box>
             <Text {...css.subtext}>
               «Большое спасибо Cicero за экономию моего времени. С Cicero
@@ -34,7 +48,9 @@ function Partner() {
               документов и упрощает отличное отслеживание в реальном времени»
             </Text>
             <Heading {...css.ceoname}>ChristinaMartha Tiahahu</Heading>
-            <Heading {...css.ceotext}>Генеральный директор Marthapura Gold & Diamond</Heading>
+            <Heading {...css.ceotext}>
+              Генеральный директор Marthapura Gold & Diamond
+            </Heading>
           </Box>
           <Image src={PartnerImage} alt="Partner" />
         </Flex>
@@ -54,38 +70,62 @@ const css = {
     marginBottom: "30px",
   },
   title: {
-    fontSize: "60px",
+    fontSize: {
+      base: "30px",
+      lg: "60px",
+    },
     fontWeight: "600",
     lineHeight: "normal",
     color: "#000",
     letterSpacing: "0.6px",
-    width: "546px",
+    width: {
+      base: "100%",
+      lg: "546px",
+    },
   },
   number: {
-    fontSize: "60px",
+    fontSize: {
+      base: "35px",
+      lg: "60px",
+    },
     fontWeight: "600",
     lineHeight: "normal",
     color: "#000",
     letterSpacing: "0.6px",
   },
   text: {
-    fontSize: "20px",
+    fontSize: {
+      base: "16px",
+      lg: "20px",
+    },
     lineHeight: "normal",
     color: "#676767",
     fontWeight: "400",
     letterSpacing: "0.2px",
-    width: "230px",
+    width: {
+      base: "100%",
+      lg: "230px",
+    },
     textAlign: "center",
   },
   subtext: {
-    fontSize: "24px",
+    fontSize: {
+      base: "20px",
+      lg: "24px",
+    },
     lineHeight: "30px",
     color: "#494949",
     fontWeight: "400",
-    width: "546px",
+    width: {
+      base: "100%",
+      lg: "546px",
+    },
   },
   ceoname: {
-    fontSize: "30px",
+    fontSize: {
+      base: "28px",
+      lg: "30px",
+    },
     lineHeight: "30px",
     color: "#000",
     fontWeight: "600",
@@ -94,7 +134,10 @@ const css = {
   },
   ceotext: {
     color: "#9C9C9C",
-    fontSize: "20px",
+    fontSize: {
+      base: "18px",
+      lg: "20px",
+    },
     lineHeight: "30px",
     fontWeight: "400",
     letterSpacing: "0.4px",

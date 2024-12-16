@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import ContactBanner from "../assets/contact.png";
+import ContactBanner from "../assets/tariff-banner.png";
 import { useTranslation } from "react-i18next";
 import TarifForm from "./TarifForm";
 
@@ -14,7 +14,7 @@ function TariffPage() {
           lg: "30px 0",
         }}>
         <Box className="container">
-          <Image src={ContactBanner} />
+          <Image {...css.banner} src={ContactBanner} />
           <Heading {...css.subname}>{t("Tariff")}</Heading>
           <Flex
             flexDirection={{ base: "column", md: "row" }}
@@ -75,5 +75,14 @@ const css = {
       base: "100%",
       lg: "400px",
     },
+  },
+  banner: {
+    height: {
+      base: "450px",
+      lg: "650px",
+    },
+    width: "100%",
+    borderRadius: "12px",
+    objectFit: "cover",
   },
 };
