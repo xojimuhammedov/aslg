@@ -27,7 +27,7 @@ function App() {
               <Advantages />
               <Services />
               <Question />
-              {/* <Partner /> */}
+              <Partner />
             </>
           }
         />
