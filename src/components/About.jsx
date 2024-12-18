@@ -68,9 +68,10 @@ const css = {
   about: {
     backgroundImage: `url(${MapImage})`,
     backgroundSize: "cover",
-    backgroundPosition: "top 75% left 0",
-    zIndex: "9999",
+    backgroundPosition: "top 25% left 0",
     backgroundRepeat: "no-repeat",
+    position: "relative",
+    zIndex: "-1",
     padding: {
       base: "36px 0",
       lg: "90px 0",

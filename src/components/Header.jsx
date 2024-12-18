@@ -19,7 +19,7 @@ import HeaderFive from "../assets/Group 10.svg";
 function Header() {
   const { t } = useTranslation();
   return (
-    <Box pb={{ base: "36px", lg: "168px" }}>
+    <Box pb={{ base: "36px", lg: "90px" }}>
       <Box className="container">
         <Flex
           flexDirection={{ base: "column", lg: "row" }}
