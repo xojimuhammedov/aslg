@@ -1,10 +1,20 @@
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  background,
+  Box,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import React from "react";
 
 import GroupOne from "../assets/Group 14.svg";
 import GroupTwo from "../assets/Group 14 (1).svg";
 import GroupThree from "../assets/Group 14 (2).svg";
 import { useTranslation } from "react-i18next";
+
+import MapImage from "../assets/map.png";
 
 function About() {
   const { t } = useTranslation();
@@ -28,38 +38,23 @@ function About() {
           <Box {...css.item}>
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupOne} alt="GroupOne" />
-              <Heading {...css.name}>
-                Ваши решения по межконтинентальным перевозкам
-              </Heading>
+              <Heading {...css.name}>{t("about_title1")}</Heading>
             </Flex>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Text {...css.text}>{t("about_text1")}</Text>
           </Box>
           <Box {...css.item}>
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupTwo} alt="GroupTwo" />
-              <Heading {...css.name}>
-                Ваши решения по межконтинентальным перевозкам
-              </Heading>
+              <Heading {...css.name}>{t("about_title2")}</Heading>
             </Flex>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Text {...css.text}>{t("about_text2")}</Text>
           </Box>
           <Box {...css.item}>
             <Flex align={"center"} gap={"17px"}>
               <Image {...css.icon} src={GroupThree} alt="GroupThree" />
-              <Heading {...css.name}>
-                Ваши решения по межконтинентальным перевозкам
-              </Heading>
+              <Heading {...css.name}>{t("about_title3")}</Heading>
             </Flex>
-            <Text {...css.text}>
-              Благодаря улучшенному решению цепочки поставок ваш бизнес
-              ускорится, а также повысится эффективность
-            </Text>
+            <Text {...css.text}>{t("about_text3")}</Text>
           </Box>
         </SimpleGrid>
       </Box>
@@ -71,7 +66,11 @@ export default About;
 
 const css = {
   about: {
-    background: "#F6F6F6",
+    backgroundImage: `url(${MapImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "top 75% left 0",
+    zIndex: "9999",
+    backgroundRepeat: "no-repeat",
     padding: {
       base: "36px 0",
       lg: "90px 0",

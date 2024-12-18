@@ -1,8 +1,9 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
-import ArrowDown from "../assets/arrow-down-02.svg";
+// import ArrowDown from "../assets/arrow-down-02.svg";
 import { useTranslation } from "react-i18next";
+import ArrowDown from "../assets/ArrowDown";
 
 function Advantages() {
   const { t } = useTranslation();
@@ -21,68 +22,68 @@ function Advantages() {
           gap={"30px"}
           mt={"60px"}
           columns={{ base: 1, sm: 2, md: 3 }}>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>01</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title7")}</Heading>
             <Text {...css.text}>{t("advantages_text7")}</Text>
           </Box>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>02</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title2")}</Heading>
             <Text {...css.text}>{t("advantages_text2")}</Text>
           </Box>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>03</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title3")}</Heading>
             <Text {...css.text}>{t("advantages_text3")}</Text>
           </Box>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>04</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title4")}</Heading>
             <Text {...css.text}>{t("advantages_text4")}</Text>
           </Box>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>05</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title5")}</Heading>
             <Text {...css.text}>{t("advantages_text5")}</Text>
           </Box>
-          <Box {...css.item}>
+          <Box className="advantages-item" {...css.item}>
             <Flex
               mb={{ base: "24px", md: "48px" }}
               align={"center"}
               justify={"space-between"}>
               <Heading {...css.number}>06</Heading>
-              <Image src={ArrowDown} alt="ArrowDown" />
+              <ArrowDown />
             </Flex>
             <Heading {...css.name}>{t("advantages_title6")}</Heading>
             <Text {...css.text}>{t("advantages_text6")}</Text>
@@ -97,7 +98,7 @@ export default Advantages;
 
 const css = {
   about: {
-    background: "#F6F6F6",
+    // background: "#F6F6F6",
     padding: {
       base: "36px 0",
       lg: "90px 0",
@@ -144,7 +145,7 @@ const css = {
   item: {
     background: "3px 5px 12px 0px rgba(0, 0, 0, 0.10)",
     borderRadius: "10px",
-    backgroundColor: "#FFFFFF",
+    backgroundColor: "#EFF8FF",
     padding: "30px",
   },
   text: {

@@ -6,7 +6,7 @@ import PartnerImage from "../assets/partner.png";
 function Partner() {
   const { t } = useTranslation();
   return (
-    <Box p={{ base: "36px 0", lg: "90px 0" }}>
+    <Box background={"#EFF8FF"} p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.subname}>{t("Отзывы")}</Heading>
         <Flex

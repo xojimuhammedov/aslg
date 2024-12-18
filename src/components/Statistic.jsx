@@ -7,7 +7,7 @@ function Statistic() {
   return (
     <Box {...css.statistic}>
       <Box className="container">
-        <SimpleGrid gap={'36px'} columns={{ base: 1, sm: 2, md: 3 }}>
+        <SimpleGrid gap={"36px"} columns={{ base: 1, sm: 2, md: 3 }}>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>12+</Heading>
             <Text {...css.text}>{t("Year Services")}</Text>
@@ -54,5 +54,6 @@ const css = {
       base: "36px 0",
       lg: "90px 0",
     },
+    background: "#EFF8FF",
   },
 };
