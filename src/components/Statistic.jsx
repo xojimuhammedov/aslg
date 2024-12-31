@@ -9,16 +9,16 @@ function Statistic() {
       <Box className="container">
         <SimpleGrid gap={"36px"} columns={{ base: 1, sm: 2, md: 3 }}>
           <Flex align={"center"} flexDirection={"column"}>
-            <Heading {...css.number}>12+</Heading>
+            <Heading {...css.number}>2+</Heading>
             <Text {...css.text}>{t("Year Services")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
-            <Heading {...css.number}>+20K</Heading>
-            <Text {...css.text}>{t("Cargo Delivered")}</Text>
+            <Heading {...css.number}>1000+</Heading>
+            <Text {...css.text}>{t("тонн ежемесячно")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
-            <Heading {...css.number}>500</Heading>
-            <Text {...css.text}>{t("Total Cargo")}</Text>
+            <Heading {...css.number}>100</Heading>
+            <Text {...css.text}>{t("основных маршрутов")}</Text>
           </Flex>
         </SimpleGrid>
         <hr

@@ -19,7 +19,7 @@ function Advantages() {
           <Text {...css.subtext}>{t("advantagesText")}</Text>
         </Flex>
         <SimpleGrid
-          gap={"30px"}
+          gap={"18px"}
           mt={"60px"}
           columns={{ base: 1, sm: 2, md: 3 }}>
           <Box className="advantages-item" {...css.item}>
@@ -170,7 +170,7 @@ const css = {
     letterSpacing: "0.35px",
     width: {
       base: "100%",
-      md: "300px",
+      md: "390px",
     },
   },
   number: {

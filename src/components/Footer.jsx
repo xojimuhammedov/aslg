@@ -25,14 +25,15 @@ function Footer() {
           spacing={10}>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("INFORMATION")}</Heading>
+            <Link {...css.link} href={"/"}>
+              {t("About Us")}
+            </Link>
             <Alink to={"/contact"}>
               <Text {...css.link}>{t("Contact")}</Text>
             </Alink>
-            <Link href={"/"}>
-              <Text {...css.link}>{t("About Us")}</Text>
-            </Link>
-            <Link href={"/"}>
-              <Text {...css.link}>{t("FAQs")}</Text>
+
+            <Link {...css.link} href={"/"}>
+              {t("FAQs")}
             </Link>
             <Alink to={"/tariff"}>
               <Text {...css.link}>{t("Tariff")}</Text>
@@ -55,19 +56,21 @@ function Footer() {
           </Flex>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("Contact")}</Heading>
-            <Link target="_blank" href={"tel:+77753378595"}>
-              <Text {...css.link}>+7 775 337 85 95</Text>
+            <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
+              +7 775 337 85 95
             </Link>
-            <Link target="_blank" href={"mailto:sultanbek.asilbek@gmail.com"}>
-              <Text {...css.link}>sultanbek.asilbek@gmail.com</Text>
+            <Link
+              {...css.link}
+              target="_blank"
+              href={"mailto:sultanbek.asilbek@gmail.com"}>
+              sultanbek.asilbek@gmail.com
             </Link>
             <Link
               target="_blank"
+              {...css.link}
               href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
-              <Text {...css.link}>
-                Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр
-                Жетысу, офис 512
-              </Text>
+              Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу,
+              офис 512
             </Link>
           </Flex>
           <Flex flexDirection={"column"}>
@@ -116,6 +119,11 @@ const css = {
     lineHeight: "24px",
     marginBottom: "10px",
     fontWeight: "500",
+    transition: "0.3s",
+
+    _hover: {
+      textDecoration: "none",
+    },
   },
   box: {
     borderBottom: "1px solid #fff",
