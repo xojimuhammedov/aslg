@@ -12,6 +12,7 @@ import { Link as Alink } from "react-router-dom";
 
 import Instagram from "../assets/instagram.svg";
 import Telegram from "../assets/tg.svg";
+import WhatsappIcon from "../assets/whatsapp.png";
 
 function Footer() {
   const { t } = useTranslation();
@@ -78,10 +79,13 @@ function Footer() {
             <Text {...css.link}>{t("Join Us")}</Text>
             <Flex gap={"12px"}>
               <Link href="/">
-                <Image src={Instagram} alt="Instagram" />
+                <Image {...css.icon} src={Instagram} alt="Instagram" />
               </Link>
               <Link href="/">
-                <Image src={Telegram} alt="Telegram" />
+                <Image {...css.icon} src={Telegram} alt="Telegram" />
+              </Link>
+              <Link href="/">
+                <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
               </Link>
             </Flex>
           </Flex>
@@ -129,5 +133,8 @@ const css = {
     borderBottom: "1px solid #fff",
     padding: "48px 0",
     borderTop: "1px solid #fff",
+  },
+  icon: {
+    width: "25px",
   },
 };
