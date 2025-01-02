@@ -92,7 +92,7 @@ const css = {
   },
   image: {
     width: {
-      base: "80px",
+      base: "75px",
       md: "30px",
     },
     borderRadius: "50%",
