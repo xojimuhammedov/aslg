@@ -1,7 +1,9 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PartnerImage from "../assets/partner.png";
+import Slider from "react-slick";
+
 
 function Partner() {
   const { t } = useTranslation();
@@ -9,7 +11,10 @@ function Partner() {
     <Box background={"#EFF8FF"} p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.subname}>{t("Отзывы")}</Heading>
-        <Flex
+        <SimpleGrid columns={4}>
+          <Box></Box>
+        </SimpleGrid>
+        {/* <Flex
           flexDirection={{ base: "column", lg: "row" }}
           align={"center"}
           justify={"space-between"}>
@@ -53,7 +58,7 @@ function Partner() {
             </Heading>
           </Box>
           <Image src={PartnerImage} alt="Partner" />
-        </Flex>
+        </Flex> */}
       </Box>
     </Box>
   );

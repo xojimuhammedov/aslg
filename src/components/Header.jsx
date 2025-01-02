@@ -8,7 +8,7 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import HeaderBanner from "../assets/header1.webp";
+import HeaderBanner from "../assets/banner.png";
 
 import HeaderOne from "../assets/Group 1.svg";
 import HeaderTwo from "../assets/Group 3.svg";

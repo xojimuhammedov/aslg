@@ -14,12 +14,14 @@ import Instagram from "../assets/instagram.svg";
 import Telegram from "../assets/tg.svg";
 import WhatsappIcon from "../assets/whatsapp.png";
 
+import LogoIcon from "../assets/footer-logo.png";
+
 function Footer() {
   const { t } = useTranslation();
   return (
     <Box {...css.footer}>
       <Box className="container">
-        <Heading mb={"24px"}>Logo</Heading>
+        <Image {...css.image} src={LogoIcon} alt="Logo" />
         <SimpleGrid
           {...css.box}
           columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
@@ -136,5 +138,11 @@ const css = {
   },
   icon: {
     width: "25px",
+  },
+  image: {
+    width: "220px",
+    height: "100px",
+    objectFit: "contain",
+    cursor: "pointer",
   },
 };

@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import Language from "./Language";
 
+import LogoIcon from "../assets/navbar-logo.png";
+
 function Navbar() {
   const { t } = useTranslation();
   return (
@@ -10,9 +12,12 @@ function Navbar() {
       <Box className="container">
         <Flex justifyContent={"space-between"} align={"center"}>
           <Link to={"/"}>
-            <Heading as={"h3"}>FLEXILOADS</Heading>
+            <Image {...css.icon} src={LogoIcon} alt="Logo" />
           </Link>
           <Flex align={"center"} gap={"32px"}>
+            <Link to={"/"}>
+              <Text {...css.link}>{t("Главная")}</Text>
+            </Link>
             <Link to={"/"}>
               <Text {...css.link}>{t("About")}</Text>
             </Link>
@@ -49,7 +54,11 @@ const css = {
   navbar: {
     padding: {
       base: "18px 0",
-      lg: "36px 0",
     },
+  },
+  icon: {
+    width: "220px",
+    height: "100px",
+    objectFit: "contain",
   },
 };
