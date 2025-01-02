@@ -53,7 +53,7 @@ const css = {
   },
   navbar: {
     padding: {
-      base: "18px 0",
+      base: "8px 0",
     },
   },
   icon: {

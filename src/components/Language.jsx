@@ -72,7 +72,7 @@ function Language() {
                 <Image
                   className={"language-image"}
                   src={item.image}
-                  {...css.image}
+                  {...css.images}
                   alt="English"
                 />
               </Box>
@@ -91,6 +91,15 @@ const css = {
     minWidth: "35px",
   },
   image: {
+    width: {
+      base: "80px",
+      md: "30px",
+    },
+    borderRadius: "50%",
+    height: "30px",
+    objectFit: "cover",
+  },
+  images: {
     width: "30px",
     borderRadius: "50%",
     height: "30px",

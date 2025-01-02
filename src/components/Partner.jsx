@@ -1,18 +1,65 @@
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  transition,
+} from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PartnerImage from "../assets/partner.png";
 import Slider from "react-slick";
 
+import LogoOne from "../assets/logo-1.png";
+import LogoTwo from "../assets/logo-2.png";
+import LogoThree from "../assets/logo-3.png";
+import LogoFour from "../assets/logo-4.jpg";
+import LogoFive from "../assets/logo-5.png";
+import LogoSix from "../assets/logo-6.jpg";
+import LogoSeven from "../assets/logo-7.jpg";
+import LogoEight from "../assets/logo-8.png";
+import LogoNine from "../assets/logo-9.png";
 
 function Partner() {
   const { t } = useTranslation();
   return (
     <Box background={"#EFF8FF"} p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
-        <Heading {...css.subname}>{t("Отзывы")}</Heading>
-        <SimpleGrid columns={4}>
-          <Box></Box>
+        <Heading {...css.title}>{t("Наши партнеры")}</Heading>
+        {/* <Heading {...css.subname}>{t("Отзывы")}</Heading> */}
+        <SimpleGrid
+          mt={"60px"}
+          gap={"36px"}
+          columns={{ base: 2, md: 3, lg: 4 }}>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoOne} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwo} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoThree} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFour} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFive} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSix} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSeven} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoEight} alt="LogoOne" />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoNine} alt="LogoOne" />
+          </Box>
         </SimpleGrid>
         {/* <Flex
           flexDirection={{ base: "column", lg: "row" }}
@@ -83,10 +130,7 @@ const css = {
     lineHeight: "normal",
     color: "#000",
     letterSpacing: "0.6px",
-    width: {
-      base: "100%",
-      lg: "546px",
-    },
+    textAlign: "center",
   },
   number: {
     fontSize: {
@@ -147,5 +191,25 @@ const css = {
     fontWeight: "400",
     letterSpacing: "0.4px",
     marginTop: "10px",
+  },
+  item: {
+    backgroundColor: "#fff",
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "20px",
+    height: "130px",
+    cursor: "pointer",
+    transition: "0.3s",
+
+    _hover: {
+      transform: "scale(1.1)",
+    },
+  },
+  icon: {
+    width: "100%",
+    height: "120px",
+    objectFit: "contain",
   },
 };
