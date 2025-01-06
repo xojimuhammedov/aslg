@@ -2,31 +2,28 @@ import { Box, Flex, Heading, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 import VacancyBanner from "../assets/vacancy.jpg";
+import { useTranslation } from "react-i18next";
 
 function VacancyPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Box p={"12px 0"} pb={"36px"}>
         <Box className="container">
           <Image {...css.banner} src={VacancyBanner} />
-          <Text {...css.text}>
-            Asilbek Sultanbek Logistic Group — молодая и динамично развивающаяся
-            логистическая компания в Казахстане. Мы специализируемся на
-            автоперевозках и предлагаем услуги по доставке грузов из Китая,
-            Европы, стран СНГ, а также по локальным направлениям внутри страны.
-          </Text>
+          <Text {...css.text}>{t("vacancy_text")}</Text>
           <Flex mt={"24px"} gap={"18px"} flexDirection={"column"}>
             <Heading {...css.title}>
-              Ведущий специалист отдела логистики
+              {t("Ведущий специалист отдела логистики")}
             </Heading>
-            <Heading {...css.title}>Менеджер по продажам</Heading>
-            <Heading {...css.title}>Менеджер по логистике</Heading>
-            <Heading {...css.title}>Оператор Call-центра</Heading>
-            <Heading {...css.title}>Менеджер отдела сервиса</Heading>
-            <Heading {...css.title}>Водитель фуры</Heading>
-            <Heading {...css.title}>Студенты (стажеры)</Heading>
+            <Heading {...css.title}>{t("Менеджер по продажам")}</Heading>
+            <Heading {...css.title}>{t("Менеджер по логистике")}</Heading>
+            <Heading {...css.title}>{t("Оператор Call-центра")}</Heading>
+            <Heading {...css.title}>{t("Менеджер отдела сервиса")}</Heading>
+            <Heading {...css.title}>{t("Водитель фуры")}</Heading>
+            <Heading {...css.title}>{t("Студенты (стажеры)")}</Heading>
           </Flex>
-          <Text {...css.text}>По вакансиям обращаться:</Text>
+          <Text {...css.text}>{t("По вакансиям обращаться")}:</Text>
           <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
             +7 775 337 85 95
           </Link>
