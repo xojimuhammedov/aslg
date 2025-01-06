@@ -19,7 +19,7 @@ import MapImage from "../assets/map.png";
 function About() {
   const { t } = useTranslation();
   return (
-    <Box {...css.about}>
+    <Box id="about" {...css.about}>
       <Box className="container">
         <Heading {...css.subname}>{t("About")}</Heading>
         <Flex

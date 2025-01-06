@@ -6,7 +6,7 @@ import { serviceData } from "./../data";
 function Services() {
   const { t, i18n } = useTranslation();
   return (
-    <Box {...css.about}>
+    <Box id="service" {...css.about}>
       <Box className="container">
         <Heading {...css.subname}>{t("Services")}</Heading>
         <Flex
