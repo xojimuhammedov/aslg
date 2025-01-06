@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Language from "./Language";
 
 import LogoIcon from "../assets/navbar-logo.png";
+import NavbarMenu from "./NavbarMenu";
 
 function Navbar() {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ function Navbar() {
           <Link to={"/"}>
             <Image {...css.icon} src={LogoIcon} alt="Logo" />
           </Link>
-          <Flex align={"center"} gap={"32px"}>
+          <Flex align={"center"} gap={{ base: "16px", lg: "32px" }}>
             <Link to={"/"}>
               <Text {...css.link}>{t("Главная")}</Text>
             </Link>
@@ -31,6 +32,7 @@ function Navbar() {
               <Text {...css.link}>{t("Contact")}</Text>
             </Link>
             <Language />
+            <NavbarMenu />
           </Flex>
         </Flex>
       </Box>
