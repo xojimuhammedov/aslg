@@ -25,7 +25,10 @@ import LogoNine from "../assets/logo9.png";
 function Partner() {
   const { t } = useTranslation();
   return (
-    <Box background={"#EFF8FF"} p={{ base: "36px 0", lg: "90px 0" }}>
+    <Box
+      id="partner"
+      background={"#EFF8FF"}
+      p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.title}>{t("Наши партнеры")}</Heading>
         {/* <Heading {...css.subname}>{t("Отзывы")}</Heading> */}

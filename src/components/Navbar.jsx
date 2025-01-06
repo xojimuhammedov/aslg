@@ -25,6 +25,9 @@ function Navbar() {
             <Link href={"#service"}>
               <Text {...css.link}>{t("Services")}</Text>
             </Link>
+            <Link href={"#partner"}>
+              <Text {...css.link}>{t("Partners")}</Text>
+            </Link>
             <Alink to={"/tariff"}>
               <Text {...css.link}>{t("Tariff")}</Text>
             </Alink>

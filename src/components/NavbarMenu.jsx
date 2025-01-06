@@ -40,6 +40,9 @@ function NavbarMenu() {
               <Link onClick={onClose} {...css.link} href="#service">
                 {t("Services")}
               </Link>
+              <Link onClick={onClose} {...css.link} href="#partner">
+                {t("Partners")}
+              </Link>
               <Alink onClick={onClose} to="/tariff">
                 <Text {...css.link}>{t("Tariff")}</Text>
               </Alink>
