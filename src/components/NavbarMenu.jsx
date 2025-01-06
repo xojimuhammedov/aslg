@@ -46,6 +46,9 @@ function NavbarMenu() {
               <Alink onClick={onClose} to="/tariff">
                 <Text {...css.link}>{t("Tariff")}</Text>
               </Alink>
+              <Alink onClick={onClose} to="/vacancy">
+                <Text {...css.link}>{t("Вакансии")}</Text>
+              </Alink>
               <Alink onClick={onClose} to="/contact">
                 <Text {...css.link}>{t("Contact")}</Text>
               </Alink>

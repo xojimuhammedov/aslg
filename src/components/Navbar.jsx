@@ -31,6 +31,9 @@ function Navbar() {
             <Alink to={"/tariff"}>
               <Text {...css.link}>{t("Tariff")}</Text>
             </Alink>
+            <Alink to="/vacancy">
+              <Text {...css.link}>{t("Вакансии")}</Text>
+            </Alink>
             <Alink to={"/contact"}>
               <Text {...css.link}>{t("Contact")}</Text>
             </Alink>
