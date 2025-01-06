@@ -52,8 +52,8 @@ const css = {
     },
   },
   text: {
-    fontSize: "16px",
-    lineHeight: "30px",
+    fontSize: "20px",
+    lineHeight: "36px",
     marginTop: "20px",
     color: "#676767",
     fontWeight: "500",
