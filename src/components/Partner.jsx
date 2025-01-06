@@ -12,15 +12,15 @@ import { useTranslation } from "react-i18next";
 import PartnerImage from "../assets/partner.png";
 import Slider from "react-slick";
 
-import LogoOne from "../assets/logo-1.png";
-import LogoTwo from "../assets/logo-2.png";
-import LogoThree from "../assets/logo-3.png";
-import LogoFour from "../assets/logo-4.jpg";
-import LogoFive from "../assets/logo-5.png";
-import LogoSix from "../assets/logo-6.jpg";
-import LogoSeven from "../assets/logo-7.jpg";
-import LogoEight from "../assets/logo-8.png";
-import LogoNine from "../assets/logo-9.png";
+import LogoOne from "../assets/logo1.png";
+import LogoTwo from "../assets/logo2.png";
+import LogoThree from "../assets/logo3.png";
+import LogoFour from "../assets/logo4.jpg";
+import LogoFive from "../assets/logo5.png";
+import LogoSix from "../assets/logo6.jpg";
+import LogoSeven from "../assets/logo7.jpg";
+import LogoEight from "../assets/logo8.png";
+import LogoNine from "../assets/logo9.png";
 
 function Partner() {
   const { t } = useTranslation();
