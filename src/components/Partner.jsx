@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text,
-  transition,
-} from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PartnerImage from "../assets/partner.png";
@@ -70,38 +62,6 @@ function Partner() {
       p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.title}>{t("Наши партнеры")}</Heading>
-        {/* <SimpleGrid
-          mt={"60px"}
-          gap={"36px"}
-          columns={{ base: 2, md: 3, lg: 4 }}>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoOne} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoTwo} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoThree} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoFour} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoFive} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoSix} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoSeven} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoEight} alt="LogoOne" />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoNine} alt="LogoOne" />
-          </Box>
-        </SimpleGrid> */}
         <Slider {...settings}>
           <Box {...css.item}>
             <Image {...css.icon} src={LogoOne} />
@@ -164,66 +124,7 @@ const css = {
     textAlign: "center",
     marginBottom: "36px",
   },
-  number: {
-    fontSize: {
-      base: "35px",
-      lg: "60px",
-    },
-    fontWeight: "600",
-    lineHeight: "normal",
-    color: "#000",
-    letterSpacing: "0.6px",
-  },
-  text: {
-    fontSize: {
-      base: "16px",
-      lg: "20px",
-    },
-    lineHeight: "normal",
-    color: "#676767",
-    fontWeight: "400",
-    letterSpacing: "0.2px",
-    width: {
-      base: "100%",
-      lg: "230px",
-    },
-    textAlign: "center",
-  },
-  subtext: {
-    fontSize: {
-      base: "20px",
-      lg: "24px",
-    },
-    lineHeight: "30px",
-    color: "#494949",
-    fontWeight: "400",
-    width: {
-      base: "100%",
-      lg: "546px",
-    },
-  },
-  ceoname: {
-    fontSize: {
-      base: "28px",
-      lg: "30px",
-    },
-    lineHeight: "30px",
-    color: "#000",
-    fontWeight: "600",
-    letterSpacing: "0.6px",
-    marginTop: "40px",
-  },
-  ceotext: {
-    color: "#9C9C9C",
-    fontSize: {
-      base: "18px",
-      lg: "20px",
-    },
-    lineHeight: "30px",
-    fontWeight: "400",
-    letterSpacing: "0.4px",
-    marginTop: "10px",
-  },
+
   item: {
     backgroundColor: "#fff",
     borderRadius: "10px",

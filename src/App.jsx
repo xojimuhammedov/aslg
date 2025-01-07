@@ -12,6 +12,7 @@ import Statistic from "./components/Statistic";
 import ContactPage from "./page/ContactPage";
 import TariffPage from "./page/TariffPage";
 import VacancyPage from "./page/VacancyPage";
+import CompanyPage from "./page/CompanyPage";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/tariff" element={<TariffPage />} />
         <Route path="/vacancy" element={<VacancyPage />} />
+        <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
     </>
