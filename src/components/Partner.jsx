@@ -119,9 +119,6 @@ function Partner() {
             <Image {...css.icon} src={LogoFive} />
           </Box>
           <Box {...css.item}>
-            <Image {...css.icon} src={LogoFive} />
-          </Box>
-          <Box {...css.item}>
             <Image {...css.icon} src={LogoSix} />
           </Box>
           <Box {...css.item}>
