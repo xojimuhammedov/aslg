@@ -21,9 +21,48 @@ import LogoSix from "../assets/logo6.jpg";
 import LogoSeven from "../assets/logo7.jpg";
 import LogoEight from "../assets/logo8.png";
 import LogoNine from "../assets/logo9.png";
+import LogoTen from "../assets/logo10.jpg";
+import LogoEleven from "../assets/logo11.jpg";
 
 function Partner() {
   const { t } = useTranslation();
+  var settings = {
+    speed: 4000,
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    slidesToShow: 5,
+    autoplaySpeed: 0,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 1260,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1060,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
   return (
     <Box
       id="partner"
@@ -31,8 +70,7 @@ function Partner() {
       p={{ base: "36px 0", lg: "90px 0" }}>
       <Box className="container">
         <Heading {...css.title}>{t("Наши партнеры")}</Heading>
-        {/* <Heading {...css.subname}>{t("Отзывы")}</Heading> */}
-        <SimpleGrid
+        {/* <SimpleGrid
           mt={"60px"}
           gap={"36px"}
           columns={{ base: 2, md: 3, lg: 4 }}>
@@ -63,52 +101,45 @@ function Partner() {
           <Box {...css.item}>
             <Image {...css.icon} src={LogoNine} alt="LogoOne" />
           </Box>
-        </SimpleGrid>
-        {/* <Flex
-          flexDirection={{ base: "column", lg: "row" }}
-          align={"center"}
-          justify={"space-between"}>
-          <Heading {...css.title}>
-            {t("Звук от наших счастливых партнеров")}
-          </Heading>
-          <Flex
-            flexWrap={{ base: "wrap", lg: "nowrap" }}
-            align={"center"}
-            mt={{ base: "18px", lg: "0px" }}
-            justify={{ base: "center", lg: "baseline" }}
-            gap={{ base: "24px", lg: "90px" }}>
-            <Flex flexDirection={"column"} align={"center"}>
-              <Heading {...css.number}>25+</Heading>
-              <Text {...css.text}>
-                Победа в номинации «Лучшая судоходная компания»
-              </Text>
-            </Flex>
-            <Flex flexDirection={"column"} align={"center"}>
-              <Heading {...css.number}>100K+</Heading>
-              <Text {...css.text}>Довольные клиенты по всему миру</Text>
-            </Flex>
-          </Flex>
-        </Flex>
-        <Flex
-          flexDirection={{ base: "column", lg: "row" }}
-          mt={{ base: "24px", lg: "60px" }}
-          gap={"12px"}
-          justify={"space-between"}>
-          <Box>
-            <Text {...css.subtext}>
-              «Большое спасибо Cicero за экономию моего времени. С Cicero
-              доставка товаров происходит быстрее, даже если они находятся очень
-              далеко. Мне также не нужно бояться и сомневаться, потому что
-              Cicero предоставляет место для хранения моих транспортных
-              документов и упрощает отличное отслеживание в реальном времени»
-            </Text>
-            <Heading {...css.ceoname}>ChristinaMartha Tiahahu</Heading>
-            <Heading {...css.ceotext}>
-              Генеральный директор Marthapura Gold & Diamond
-            </Heading>
+        </SimpleGrid> */}
+        <Slider {...settings}>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoOne} />
           </Box>
-          <Image src={PartnerImage} alt="Partner" />
-        </Flex> */}
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwo} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoThree} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFour} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFive} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFive} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSix} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSeven} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoEight} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoNine} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoEleven} />
+          </Box>
+        </Slider>
       </Box>
     </Box>
   );
@@ -134,6 +165,7 @@ const css = {
     color: "#000",
     letterSpacing: "0.6px",
     textAlign: "center",
+    marginBottom: "36px",
   },
   number: {
     fontSize: {
@@ -202,7 +234,7 @@ const css = {
     alignItems: "center",
     justifyContent: "center",
     padding: "20px",
-    height: "130px",
+    height: "160px",
     cursor: "pointer",
     transition: "0.3s",
 

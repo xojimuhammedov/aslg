@@ -49,3 +49,7 @@ a {
 a:hover {
   text-decoration: none !important;
 }
+
+.slick-initialized .slick-slide {
+  margin: 15px;
+}

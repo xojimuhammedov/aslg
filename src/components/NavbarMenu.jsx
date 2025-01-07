@@ -32,7 +32,7 @@ function NavbarMenu() {
               alignItems={"center"}
               gap={"36px"}>
               <Alink onClick={onClose} to="/">
-                <Text {...css.link}>{t("Главная")}</Text>
+                <Text {...css.link}>{t("Home")}</Text>
               </Alink>
               <Link onClick={onClose} {...css.link} href="/">
                 {t("About")}

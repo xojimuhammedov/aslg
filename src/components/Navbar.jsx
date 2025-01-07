@@ -17,7 +17,7 @@ function Navbar() {
           </Alink>
           <Flex align={"center"} gap={{ base: "16px", lg: "32px" }}>
             <Alink to={"/"}>
-              <Text {...css.link}>{t("Главная")}</Text>
+              <Text {...css.link}>{t("Home")}</Text>
             </Alink>
             <Link href={"#about"}>
               <Text {...css.link}>{t("About")}</Text>

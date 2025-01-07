@@ -55,7 +55,7 @@ const css = {
     fontSize: "20px",
     lineHeight: "36px",
     marginTop: "20px",
-    color: "#676767",
+    color: "#000",
     fontWeight: "500",
   },
   title: {
