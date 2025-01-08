@@ -1,15 +1,26 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
+
+import CompanyLogo from "../assets/company-logo.jpg";
 
 function CompanyPage() {
   const { t } = useTranslation();
   return (
-    <Box p={"36px 0"}>
+    <Box p={"18px 0"}>
       <Box className="container">
         <Heading {...css.title}>{t("О Компании")}</Heading>
-        <Text {...css.text}>{t("text1")}</Text>
-        <Text {...css.text}>{t("text2")}</Text>
+        <Flex
+          flexDirection={{ base: "column-reverse", md: "row" }}
+          align={"center"}
+          gap={"36px"}>
+          <Box>
+            <Text {...css.text}>{t("text1")}</Text>
+            <Text {...css.text}>{t("text2")}</Text>
+          </Box>
+          <Image {...css.image} src={CompanyLogo} alt="Company Logo" />
+        </Flex>
+
         <Heading {...css.subname}>{t("Как работаем")}</Heading>
 
         <Text {...css.texts}>
@@ -41,7 +52,7 @@ const css = {
     lineHeight: "normal",
     color: "#000",
     letterSpacing: "0.6px",
-    marginBottom: "36px",
+    marginBottom: "18px",
   },
   text: {
     fontSize: {
@@ -72,5 +83,20 @@ const css = {
     marginBottom: "12px",
     letterSpacing: "0.5px",
     cursor: "pointer",
+  },
+  image: {
+    width: {
+      base: "100%",
+      md: "550px",
+    },
+    height: {
+      base: "auto",
+      md: "580px",
+    },
+    objectFit: "cover",
+    borderRadius: {
+      base: "12px",
+      md: "20px",
+    },
   },
 };
