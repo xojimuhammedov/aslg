@@ -136,7 +136,7 @@ const css = {
     height: "80px",
   },
   text: {
-    color: "#9C9C9C",
+    color: "#000",
     fontSize: {
       base: "16px",
       lg: "18px",
