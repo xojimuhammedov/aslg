@@ -10,18 +10,20 @@ function CompanyPage() {
         <Heading {...css.title}>{t("О Компании")}</Heading>
         <Text {...css.text}>{t("text1")}</Text>
         <Text {...css.text}>{t("text2")}</Text>
-        <Heading {...css.subname}>Как работаем</Heading>
+        <Heading {...css.subname}>{t("Как работаем")}</Heading>
 
         <Text {...css.texts}>
-          Вы оставляете заявку на сайте, e-mail, whatsapp, телефон.
+          {t("Вы оставляете заявку на сайте, e-mail, whatsapp, телефон.")}
         </Text>
         <Text {...css.texts}>
-          С вами связываются наши связываются наши специалисты
+          {t("С вами связываются наши связываются наши специалисты")}
         </Text>
         <Text {...css.texts}>
-          Мы предоставляем вам каждодневный отчет по грузам
+          {t("Мы предоставляем вам каждодневный отчет по грузам")}
         </Text>
-        <Text {...css.texts}>Проводим закрытие счета после выгрузки</Text>
+        <Text {...css.texts}>
+          {t("Проводим закрытие счета после выгрузки")}
+        </Text>
       </Box>
     </Box>
   );
