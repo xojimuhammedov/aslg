@@ -32,13 +32,7 @@ function Header() {
             <Heading {...css.title}>
               {t("Доставка любых возможностей с одним грузом за раз")}
             </Heading>
-            <Flex mt={"20px"} justify={"space-between"}>
-              <Image {...css.image} src={HeaderOne} alt="HeaderOne" />
-              <Image {...css.image} src={HeaderTwo} alt="HeaderTwo" />
-              <Image {...css.image} src={HeaderThree} alt="HeaderThree" />
-              <Image {...css.image} src={HeaderFour} alt="HeaderFour" />
-              <Image {...css.image} src={HeaderFive} alt="HeaderFive" />
-            </Flex>
+   
             <Heading {...css.name}>
               {t("Рассчитайте стоимость доставки")}
             </Heading>
