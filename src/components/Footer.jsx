@@ -28,17 +28,17 @@ function Footer() {
           spacing={10}>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("INFORMATION")}</Heading>
-            <Link {...css.link} href={"/"}>
-              {t("About Us")}
-            </Link>
-            <Alink to={"/contact"}>
+
+            <Alink onClick={() => window.scrollTo(0, 0)} to={"/company"}>
+              <Text {...css.link}>{t("About")}</Text>
+            </Alink>
+            <Alink onClick={() => window.scrollTo(0, 0)} to={"/vacancy"}>
+              <Text {...css.link}>{t("Вакансии")}</Text>
+            </Alink>
+            <Alink onClick={() => window.scrollTo(0, 0)} to={"/contact"}>
               <Text {...css.link}>{t("Contact")}</Text>
             </Alink>
-
-            <Link {...css.link} href={"/"}>
-              {t("FAQs")}
-            </Link>
-            <Alink to={"/tariff"}>
+            <Alink onClick={() => window.scrollTo(0, 0)} to={"/tariff"}>
               <Text {...css.link}>{t("Tariff")}</Text>
             </Alink>
           </Flex>

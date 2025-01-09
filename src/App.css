@@ -66,6 +66,10 @@
   stroke: #fff !important;
 }
 
+.slick-list{
+  margin-bottom: -162px !important;
+}
+
 @media (max-width: 768px) {
   .form-map {
     height: 450px;
