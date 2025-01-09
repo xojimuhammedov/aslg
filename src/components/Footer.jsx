@@ -83,7 +83,7 @@ function Footer() {
               <Link href="/">
                 <Image {...css.icon} src={Instagram} alt="Instagram" />
               </Link>
-              <Link href="/">
+              <Link target="_blank" href="https://t.me/aslgkz">
                 <Image {...css.icon} src={Telegram} alt="Telegram" />
               </Link>
               <Link target="_blank" href="https://wa.me/+77753378595">
