@@ -41,7 +41,7 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
-      <Link {...css.link} href="/">
+      <Link {...css.link} target="_blank" href="https://wa.me/+77753378595">
         <Whatsapp />
       </Link>
     </>
