@@ -72,8 +72,9 @@ function Footer() {
               target="_blank"
               {...css.link}
               href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
-              Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу,
-              офис 512
+              {t(
+                "Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу, офис 512"
+              )}
             </Link>
           </Flex>
           <Flex flexDirection={"column"}>
