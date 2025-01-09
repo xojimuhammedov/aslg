@@ -13,6 +13,8 @@ import ContactPage from "./page/ContactPage";
 import TariffPage from "./page/TariffPage";
 import VacancyPage from "./page/VacancyPage";
 import CompanyPage from "./page/CompanyPage";
+import { Link } from "@chakra-ui/react";
+import Whatsapp from "./assets/Whatsapp";
 
 function App() {
   return (
@@ -39,8 +41,20 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
+      <Link {...css.link} href="/">
+        <Whatsapp />
+      </Link>
     </>
   );
 }
 
 export default App;
+
+const css = {
+  link: {
+    position: "fixed",
+    zIndex: "9999",
+    top: "88%",
+    left: "93%",
+  },
+};
