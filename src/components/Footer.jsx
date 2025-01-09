@@ -86,7 +86,7 @@ function Footer() {
               <Link href="/">
                 <Image {...css.icon} src={Telegram} alt="Telegram" />
               </Link>
-              <Link href="/">
+              <Link target="_blank" href="https://wa.me/+77753378595">
                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
               </Link>
             </Flex>
@@ -98,7 +98,7 @@ function Footer() {
           textAlign={"center"}
           lineHeight={"24px"}
           mt={"40px"}>
-          © 2024 All rights reserved
+          © 2024 {t("All rights reserved")}
         </Text>
       </Box>
     </Box>
