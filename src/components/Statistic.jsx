@@ -10,7 +10,7 @@ function Statistic() {
         <SimpleGrid gap={"36px"} columns={{ base: 1, sm: 2, md: 3 }}>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>2+</Heading>
-            <Text {...css.text}>{t("Year Services")}</Text>
+            <Text {...css.text}>{t("года на рынке")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
             <Heading {...css.number}>1000+</Heading>
