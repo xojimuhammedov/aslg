@@ -55,6 +55,9 @@ const css = {
     position: "fixed",
     zIndex: "9999",
     top: "88%",
-    left: "93%",
+    left: {
+      base: "85%",
+      md: "93%",
+    },
   },
 };
