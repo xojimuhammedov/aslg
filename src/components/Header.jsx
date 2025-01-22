@@ -9,15 +9,76 @@ import {
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import HeaderBanner from "../assets/banner.png";
-
-import HeaderOne from "../assets/Group 1.svg";
-import HeaderTwo from "../assets/Group 3.svg";
-import HeaderThree from "../assets/Group 4.svg";
-import HeaderFour from "../assets/Group 8.svg";
-import HeaderFive from "../assets/Group 10.svg";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 function Header() {
   const { t } = useTranslation();
+
+  const [nameValue, setNameValue] = useState("");
+  const [numberValue, setNumberValue] = useState("");
+  const [textValue, setTextValue] = useState("");
+  const [country, setCountry] = useState("");
+  const [location, setLocation] = useState("");
+
+  function changeNumber(item) {
+    setNumberValue(item);
+  }
+
+  function changeName(item) {
+    setNameValue(item);
+  }
+  function changeText(item) {
+    setTextValue(item);
+  }
+  function changeCountry(item) {
+    setCountry(item);
+  }
+  function changeLocation(item) {
+    setLocation(item);
+  }
+
+  const handleClear = () => {
+    setNameValue("");
+    setNumberValue("");
+    setTextValue("");
+    setCountry("");
+    setLocation("");
+  };
+  let bot = {
+    TOKEN: "8050907392:AAGe_5c4l2KyI2l1cm9WM-oad3totFzUeVg",
+    chatID: "-1002323257681",
+    message: `
+            Здравствуйте, у меня для вас новые новости о доставке!
+            Имя 👤: ${nameValue}; 
+            Номер телефона ☎: ${numberValue};
+            Откуда: ${country};
+            Куда: ${location};
+            Сообщение: ${textValue};
+            `,
+  };
+
+  const encodedMessage = encodeURIComponent(bot.message);
+
+  function sendMessage(e) {
+    e.preventDefault();
+
+    fetch(
+      `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
+      {
+        method: "GET",
+      }
+    ).then(
+      () => {
+        handleClear();
+        // window.location.reload();
+        toast.success(t("Ваше сообщение успешно отправлено!"));
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
   return (
     <Box pb={{ base: "36px", lg: "90px" }}>
       <Box className="container">
@@ -32,24 +93,48 @@ function Header() {
             <Heading {...css.title}>
               {t("Доставка любых возможностей с одним грузом за раз")}
             </Heading>
-   
+
             <Heading {...css.name}>
               {t("Рассчитайте стоимость доставки")}
             </Heading>
             <SimpleGrid mt={"15px"} columns={{ base: 1, lg: 2 }} gap={"20px"}>
-              <Input {...css.input} placeholder={t("Откуда")} />
-              <Input {...css.input} placeholder={t("Куда")} />
+              <Input
+                value={country}
+                onChange={(e) => changeCountry(e.target.value)}
+                {...css.input}
+                placeholder={t("Откуда")}
+              />
+              <Input
+                value={location}
+                onChange={(e) => changeLocation(e.target.value)}
+                {...css.input}
+                placeholder={t("Куда")}
+              />
             </SimpleGrid>
             <Input
               mt={"15px"}
+              value={textValue}
+              onChange={(e) => changeText(e.target.value)}
               {...css.input}
               placeholder={t("Описание груза (вес, объем)")}
             />
             <SimpleGrid mt={"15px"} columns={{ base: 1, lg: 2 }} gap={"20px"}>
-              <Input {...css.input} placeholder={t("Ваше имя")} />
-              <Input {...css.input} placeholder={t("Ваш телефон")} />
+              <Input
+                value={nameValue}
+                onChange={(e) => changeName(e.target.value)}
+                {...css.input}
+                placeholder={t("Ваше имя")}
+              />
+              <Input
+                value={numberValue}
+                onChange={(e) => changeNumber(e.target.value)}
+                {...css.input}
+                placeholder={t("Ваш телефон")}
+              />
             </SimpleGrid>
-            <Button {...css.button}>{t("Рассчитать")}</Button>
+            <Button type="submit" onClick={sendMessage} {...css.button}>
+              {t("Рассчитать")}
+            </Button>
           </Box>
         </Flex>
       </Box>
