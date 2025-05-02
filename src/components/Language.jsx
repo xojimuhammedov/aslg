@@ -46,11 +46,11 @@ function Language() {
   const languageImage =
     i18n?.language === "kz"
       ? UzbekImage
-      : i18n?.language === "ru"
-      ? RussianImage
-      : i18n?.language === "chn"
-      ? ChinaImage
-      : EnglishImage;
+      : i18n?.language === "en"
+        ? EnglishImage
+        : i18n?.language === "chn"
+          ? ChinaImage
+          : RussianImage;
 
   const data = languageData?.filter((item) => item?.value != i18n.language);
 
