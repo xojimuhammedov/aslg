@@ -98,6 +98,8 @@ function Header() {
     try {
       const response = await axios.post(webhookUrl, payload);
       console.log('Success:', response.data);
+      toast.success(t("Ваше сообщение успешно отправлено!"));
+      handleClear();
     } catch (error) {
       console.error('Error sending to Bitrix24:', error);
     }
