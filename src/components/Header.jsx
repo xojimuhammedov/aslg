@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import HeaderBanner from "../assets/banner.png";
 import { toast } from "react-toastify";
 import { useState } from "react";
+import axios from "axios";
 
 function Header() {
   const { t } = useTranslation();
@@ -60,25 +61,49 @@ function Header() {
 
   const encodedMessage = encodeURIComponent(bot.message);
 
-  function sendMessage(e) {
-    e.preventDefault();
+  // function sendMessage(e) {
+  //   e.preventDefault();
 
-    fetch(
-      `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
-      {
-        method: "GET",
+  //   fetch(
+  //     `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
+  //     {
+  //       method: "GET",
+  //     }
+  //   ).then(
+  //     () => {
+  //       handleClear();
+  //       // window.location.reload();
+  //       toast.success(t("Ваше сообщение успешно отправлено!"));
+  //     },
+  //     (error) => {
+  //       console.log(error);
+  //     }
+  //   );
+  // }
+
+  const handleSubmit = async () => {
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/1tlhl35d13jpfj8l/crm.lead.add';
+
+    const payload = {
+      fields: {
+        NAME: nameValue, // kerakli bo'lishi mumkin
+        UfCrm1741934391679: country, // Откуда
+        UfCrm1741934398438: location, // Куда
+        UfCrm1745944160728: textValue, // Описание груза
+        LAST_NAME: numberValue,
+        Id: 1
       }
-    ).then(
-      () => {
-        handleClear();
-        // window.location.reload();
-        toast.success(t("Ваше сообщение успешно отправлено!"));
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
+    };
+
+    try {
+      const response = await axios.post(webhookUrl, payload);
+      console.log('Success:', response.data);
+    } catch (error) {
+      console.error('Error sending to Bitrix24:', error);
+    }
+  };
+
+
   return (
     <Box pb={{ base: "36px", lg: "90px" }}>
       <Box className="container">
@@ -132,7 +157,7 @@ function Header() {
                 placeholder={t("Ваш телефон")}
               />
             </SimpleGrid>
-            <Button type="submit" onClick={sendMessage} {...css.button}>
+            <Button type="submit" onClick={handleSubmit} {...css.button}>
               {t("Рассчитать")}
             </Button>
           </Box>
