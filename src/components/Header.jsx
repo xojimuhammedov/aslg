@@ -82,7 +82,11 @@ function Header() {
   // }
 
   const handleSubmit = async () => {
-    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/1tlhl35d13jpfj8l/crm.lead.add';
+    if (!nameValue || !country || !location || !textValue || !numberValue) {
+      toast.error(t("Iltimos, barcha maydonlarni to‘ldiring!"));
+      return;
+    }
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/m79i2hm4bgh8zjhz/crm.lead.add';
 
     const payload = {
       fields: {
@@ -130,18 +134,21 @@ function Header() {
                 onChange={(e) => changeCountry(e.target.value)}
                 {...css.input}
                 placeholder={t("Откуда")}
+                required
               />
               <Input
                 value={location}
                 onChange={(e) => changeLocation(e.target.value)}
                 {...css.input}
                 placeholder={t("Куда")}
+                required
               />
             </SimpleGrid>
             <Input
               mt={"15px"}
               value={textValue}
               onChange={(e) => changeText(e.target.value)}
+              required
               {...css.input}
               placeholder={t("Описание груза (вес, объем)")}
             />
@@ -151,12 +158,14 @@ function Header() {
                 onChange={(e) => changeName(e.target.value)}
                 {...css.input}
                 placeholder={t("Ваше имя")}
+                required
               />
               <Input
                 value={numberValue}
                 onChange={(e) => changeNumber(e.target.value)}
                 {...css.input}
                 placeholder={t("Ваш телефон")}
+                required
               />
             </SimpleGrid>
             <Button type="submit" onClick={handleSubmit} {...css.button}>
