@@ -18,6 +18,12 @@ import LogoIcon from "../assets/footer-logo.png";
 
 function Footer() {
   const { t } = useTranslation();
+    const handleCall = () => {
+      if (typeof window.gtag_report_conversion === "function") {
+        window.gtag_report_conversion("tel:77753378595");
+      }
+    };
+  
   return (
     <Box {...css.footer}>
       <Box className="container">
@@ -59,7 +65,7 @@ function Footer() {
           </Flex>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("Contact")}</Heading>
-            <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
+            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
               +7 775 337 85 95
             </Link>
             <Link
