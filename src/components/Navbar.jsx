@@ -8,9 +8,19 @@ import { Link as Alink } from "react-router-dom";
 
 function Navbar() {
   const { t } = useTranslation();
+  const handleCall = () => {
+    if (typeof window.gtag_report_conversion === "function") {
+      window.gtag_report_conversion("tel:77753378595");
+    }
+  };
   return (
     <Box {...css.navbar}>
       <Box className="container">
+        <Flex justifyContent={'flex-end'}>
+          <Link {...css.links} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
+              +7 775 337 85 95
+            </Link>
+        </Flex>
         <Flex justifyContent={"space-between"} align={"center"}>
           <Alink to={"/"}>
             <Image {...css.icon} src={LogoIcon} alt="Logo" />
@@ -59,6 +69,12 @@ const css = {
       lg: "block",
     },
   },
+  links: {
+    fontSize: "18px",
+    lineHeight: "22px",
+    fontWeight: "500",
+    color: "rgba(0, 0, 0, 1)",
+  },
   navbar: {
     padding: {
       base: "8px 0",
@@ -66,7 +82,7 @@ const css = {
   },
   icon: {
     width: "220px",
-    height: "100px",
+    height: "60px",
     objectFit: "contain",
   },
 };

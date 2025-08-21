@@ -13,10 +13,16 @@ import ContactPage from "./page/ContactPage";
 import TariffPage from "./page/TariffPage";
 import VacancyPage from "./page/VacancyPage";
 import CompanyPage from "./page/CompanyPage";
-import { Link } from "@chakra-ui/react";
+import { Link, Image } from "@chakra-ui/react";
 import Whatsapp from "./assets/Whatsapp";
+import CallIcon from './assets/call-icon.png'
 
 function App() {
+  const handleCall = () => {
+    if (typeof window.gtag_report_conversion === "function") {
+      window.gtag_report_conversion("tel:77753378595");
+    }
+  };
   return (
     <>
       <Navbar />
@@ -41,6 +47,9 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
+      <Link {...css.call} onClick={handleCall} target="_blank" href={"tel:+77753378595"}>
+         <Image w={'50px'} src={CallIcon} />
+      </Link>
       <Link {...css.link} target="_blank" href="https://wa.me/+77753378595">
         <Whatsapp />
       </Link>
@@ -60,4 +69,13 @@ const css = {
       md: "93%",
     },
   },
+  call:{
+    position: "fixed",
+    zIndex: "9999",
+    top: "80%",
+    left: {
+      base: "85%",
+      md: "93%",
+    },
+  }
 };
