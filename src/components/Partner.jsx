@@ -16,6 +16,16 @@ import LogoNine from "../assets/logo9.png";
 import LogoTen from "../assets/logo10.jpg";
 import LogoEleven from "../assets/logo11.jpg";
 
+import LogoTwelf from '../assets/logo-1.png'
+import LogoFourteen from '../assets/logo-2.jpg'
+import LogoFiveteen from '../assets/logo-3.jpg'
+import LogoSixteen from '../assets/logo-4.jpg'
+import LogoSeventeen from '../assets/logo-5.jpg'
+import LogoEighteen from '../assets/logo-6.jpg'
+import LogoNineteen from '../assets/logo-7.jpg'
+import LogoTwenty from '../assets/logo-8.jpg'
+import LogoTwentyOne from '../assets/logo-9.jpg'
+
 function Partner() {
   const { t } = useTranslation();
   var settings = {
@@ -95,6 +105,33 @@ function Partner() {
           </Box>
           <Box {...css.item}>
             <Image {...css.icon} src={LogoEleven} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwelf} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFourteen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoFiveteen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSixteen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoSeventeen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoEighteen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoNineteen} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwenty} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwentyOne} />
           </Box>
         </Slider>
       </Box>

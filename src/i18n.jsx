@@ -11,11 +11,12 @@ i18n
   .init({
     debug: true,
     fallbackLng: "ru",
+    lng: "ru", // doimiy rus tili
     supportedLngs,
     interpolation: {
       escapeValue: false,
     },
-    resources: resorce,
+    resources: resorce
   });
 
 export default i18n;

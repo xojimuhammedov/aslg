@@ -46,47 +46,14 @@ function Header() {
     setCountry("");
     setLocation("");
   };
-  let bot = {
-    TOKEN: "8050907392:AAGe_5c4l2KyI2l1cm9WM-oad3totFzUeVg",
-    chatID: "-1002323257681",
-    message: `
-            Здравствуйте, у меня для вас новые новости о доставке!
-            Имя 👤: ${nameValue}; 
-            Номер телефона ☎: ${numberValue};
-            Откуда: ${country};
-            Куда: ${location};
-            Сообщение: ${textValue};
-            `,
-  };
 
-  const encodedMessage = encodeURIComponent(bot.message);
-
-  // function sendMessage(e) {
-  //   e.preventDefault();
-
-  //   fetch(
-  //     `https://api.telegram.org/bot${bot.TOKEN}/sendMessage?chat_id=${bot.chatID}&text=${encodedMessage} `,
-  //     {
-  //       method: "GET",
-  //     }
-  //   ).then(
-  //     () => {
-  //       handleClear();
-  //       // window.location.reload();
-  //       toast.success(t("Ваше сообщение успешно отправлено!"));
-  //     },
-  //     (error) => {
-  //       console.log(error);
-  //     }
-  //   );
-  // }
 
   const handleSubmit = async () => {
     if (!nameValue || !country || !location || !textValue || !numberValue) {
       toast.error(t("Iltimos, barcha maydonlarni to‘ldiring!"));
       return;
     }
-    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/m79i2hm4bgh8zjhz/crm.lead.add';
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/4xndowgqug70lswp/crm.lead.add';
 
     const payload = {
       fields: {
