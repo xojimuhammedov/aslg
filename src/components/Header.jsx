@@ -53,7 +53,7 @@ function Header() {
       toast.error(t("Iltimos, barcha maydonlarni to‘ldiring!"));
       return;
     }
-    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/4xndowgqug70lswp/crm.lead.add';
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/87/4u6erbzb8yic845a/crm.lead.add';
 
     const payload = {
       fields: {
@@ -62,7 +62,7 @@ function Header() {
         UfCrm1741934398438: location, // Куда
         UfCrm1745944160728: textValue, // Описание груза
         LAST_NAME: numberValue,
-        Id: 1
+        Id: 87
       }
     };
 

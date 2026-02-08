@@ -20,7 +20,7 @@ function Footer() {
   const { t } = useTranslation();
     const handleCall = () => {
       if (typeof window.gtag_report_conversion === "function") {
-        window.gtag_report_conversion("tel:77753378595");
+        window.gtag_report_conversion("tel:77789821945");
       }
     };
   
@@ -65,21 +65,21 @@ function Footer() {
           </Flex>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("Contact")}</Heading>
-            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
-              +7 775 337 85 95
+            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77789821945"}>
+              +7 778 982 19 45
             </Link>
             <Link
               {...css.link}
               target="_blank"
-              href={"mailto:sultanbek.asilbek@gmail.com"}>
-              sultanbek.asilbek@gmail.com
+              href={"mailto:office@aslg.kz"}>
+              office@aslg.kz
             </Link>
             <Link
               target="_blank"
               {...css.link}
               href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
               {t(
-                "Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу, офис 512"
+                "Республика Казахстан, г. Алматы, проспект Райымбека, 92"
               )}
             </Link>
           </Flex>
@@ -93,7 +93,7 @@ function Footer() {
               <Link target="_blank" href="https://t.me/aslgkz">
                 <Image {...css.icon} src={Telegram} alt="Telegram" />
               </Link>
-              <Link target="_blank" href="https://wa.me/+77753378595">
+              <Link target="_blank" href="https://wa.me/+77789821945">
                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
               </Link>
             </Flex>
@@ -105,7 +105,7 @@ function Footer() {
           textAlign={"center"}
           lineHeight={"24px"}
           mt={"40px"}>
-          © 2024 {t("All rights reserved")}
+          © 2026 {t("All rights reserved")}
         </Text>
       </Box>
     </Box>

@@ -20,7 +20,7 @@ import CallIcon from './assets/call-icon.png'
 function App() {
   const handleCall = () => {
     if (typeof window.gtag_report_conversion === "function") {
-      window.gtag_report_conversion("tel:77753378595");
+      window.gtag_report_conversion("tel:77789821945");
     }
   };
   return (
@@ -47,10 +47,10 @@ function App() {
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
-      <Link {...css.call} onClick={handleCall} target="_blank" href={"tel:+77753378595"}>
+      <Link {...css.call} onClick={handleCall} target="_blank" href={"tel:+77789821945"}>
          <Image w={'50px'} src={CallIcon} />
       </Link>
-      <Link {...css.link} target="_blank" href="https://wa.me/+77753378595">
+      <Link {...css.link} target="_blank" href="https://wa.me/+77789821945">
         <Whatsapp />
       </Link>
     </>

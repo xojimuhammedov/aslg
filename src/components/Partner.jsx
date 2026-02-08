@@ -1,20 +1,7 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import PartnerImage from "../assets/partner.png";
 import Slider from "react-slick";
-
-import LogoOne from "../assets/logo1.png";
-import LogoTwo from "../assets/logo2.png";
-import LogoThree from "../assets/logo3.png";
-import LogoFour from "../assets/logo4.jpg";
-import LogoFive from "../assets/logo5.png";
-import LogoSix from "../assets/logo6.jpg";
-import LogoSeven from "../assets/logo7.jpg";
-import LogoEight from "../assets/logo8.png";
-import LogoNine from "../assets/logo9.png";
-import LogoTen from "../assets/logo10.jpg";
-import LogoEleven from "../assets/logo11.jpg";
 
 import LogoTwelf from '../assets/logo-1.png'
 import LogoFourteen from '../assets/logo-2.jpg'
@@ -73,39 +60,6 @@ function Partner() {
       <Box className="container">
         <Heading {...css.title}>{t("Наши партнеры")}</Heading>
         <Slider {...settings}>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoOne} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoTwo} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoThree} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoFour} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoFive} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoSix} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoSeven} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoEight} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoNine} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoTen} />
-          </Box>
-          <Box {...css.item}>
-            <Image {...css.icon} src={LogoEleven} />
-          </Box>
           <Box {...css.item}>
             <Image {...css.icon} src={LogoTwelf} />
           </Box>
