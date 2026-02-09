@@ -53,7 +53,7 @@ function Header() {
       toast.error(t("Iltimos, barcha maydonlarni to‘ldiring!"));
       return;
     }
-    const webhookUrl = 'https://aslg.bitrix24.kz/rest/87/4u6erbzb8yic845a/crm.lead.add';
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/1oxr9ds6mpp9d6l2/crm.lead.add';
 
     const payload = {
       fields: {
