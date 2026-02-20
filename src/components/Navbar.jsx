@@ -44,6 +44,9 @@ function Navbar() {
             <Alink to="/vacancy">
               <Text {...css.link}>{t("Вакансии")}</Text>
             </Alink>
+            <Alink to="/konsolidatsiya">
+              <Text {...css.link}>{t("Консолидация")}</Text>
+            </Alink>
             <Alink to={"/contact"}>
               <Text {...css.link}>{t("Contact")}</Text>
             </Alink>

@@ -30,7 +30,8 @@ function NavbarMenu() {
               pt={"48px"}
               flexDirection={"column"}
               alignItems={"center"}
-              gap={"36px"}>
+              gap={"36px"}
+            >
               <Alink onClick={onClose} to="/">
                 <Text {...css.link}>{t("Home")}</Text>
               </Alink>
@@ -48,6 +49,9 @@ function NavbarMenu() {
               </Alink>
               <Alink onClick={onClose} to="/vacancy">
                 <Text {...css.link}>{t("Вакансии")}</Text>
+              </Alink>
+              <Alink onClick={onClose} to="/konsolidatsiya">
+                <Text {...css.link}>{t("Консолидация")}</Text>
               </Alink>
               <Alink onClick={onClose} to="/contact">
                 <Text {...css.link}>{t("Contact")}</Text>
