@@ -15,7 +15,8 @@ import VacancyPage from "./page/VacancyPage";
 import CompanyPage from "./page/CompanyPage";
 import { Link, Image } from "@chakra-ui/react";
 import Whatsapp from "./assets/Whatsapp";
-import CallIcon from './assets/call-icon.png'
+import CallIcon from "./assets/call-icon.png";
+import KonsolidatsiyaPage from "./page/KonsolidatsiyaPage";
 
 function App() {
   const handleCall = () => {
@@ -43,12 +44,18 @@ function App() {
         />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/tariff" element={<TariffPage />} />
+        <Route path="/konsolidatsiya" element={<KonsolidatsiyaPage />} />
         <Route path="/vacancy" element={<VacancyPage />} />
         <Route path="/company" element={<CompanyPage />} />
       </Routes>
       <Footer />
-      <Link {...css.call} onClick={handleCall} target="_blank" href={"tel:+77789821945"}>
-         <Image w={'50px'} src={CallIcon} />
+      <Link
+        {...css.call}
+        onClick={handleCall}
+        target="_blank"
+        href={"tel:+77789821945"}
+      >
+        <Image w={"50px"} src={CallIcon} />
       </Link>
       <Link {...css.link} target="_blank" href="https://wa.me/+77789821945">
         <Whatsapp />
@@ -69,7 +76,7 @@ const css = {
       md: "93%",
     },
   },
-  call:{
+  call: {
     position: "fixed",
     zIndex: "9999",
     top: "80%",
@@ -77,5 +84,5 @@ const css = {
       base: "85%",
       md: "93%",
     },
-  }
+  },
 };
