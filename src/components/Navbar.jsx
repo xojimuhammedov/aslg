@@ -17,8 +17,8 @@ function Navbar() {
     <Box {...css.navbar}>
       <Box className="container">
         <Flex justifyContent={'flex-end'}>
-          <Link {...css.links} target="_blank" onClick={handleCall} href={"tel:+77789821945"}>
-              +7 778 982 19 45
+          <Link {...css.links} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
+              +7 775 337 85 95
             </Link>
         </Flex>
         <Flex justifyContent={"space-between"} align={"center"}>

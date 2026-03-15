@@ -13,8 +13,8 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'chakra-vendor': ['@chakra-ui/react', '@emotion/react', '@emotion/styled', 'framer-motion'],
           'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-          'ui-vendor': ['swiper', 'react-slick', 'react-owl-carousel', 'lucide-react'],
-          'utils-vendor': ['axios', 'lodash', 'react-query', 'react-hook-form'],
+          'ui-vendor': ['lucide-react'],
+          'utils-vendor': []
         },
       },
     },

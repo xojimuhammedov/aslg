@@ -20,7 +20,7 @@ function Footer() {
   const { t } = useTranslation();
     const handleCall = () => {
       if (typeof window.gtag_report_conversion === "function") {
-        window.gtag_report_conversion("tel:77789821945");
+        window.gtag_report_conversion("tel:77753378595");
       }
     };
   
@@ -65,8 +65,8 @@ function Footer() {
           </Flex>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("Contact")}</Heading>
-            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77789821945"}>
-              +7 778 982 19 45
+            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
+              +7 775 337 85 95
             </Link>
             <Link
               {...css.link}

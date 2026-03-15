@@ -24,8 +24,8 @@ function VacancyPage() {
             <Heading {...css.title}>{t("Студенты (стажеры)")}</Heading>
           </Flex>
           <Text {...css.text}>{t("По вакансиям обращаться")}:</Text>
-          <Link {...css.link} target="_blank" href={"tel:+77789821945"}>
-            +7 778 982 19 45
+          <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
+            +7 775 337 85 95
           </Link>
           <Link
             {...css.link}

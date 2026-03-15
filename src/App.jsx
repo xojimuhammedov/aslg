@@ -21,7 +21,7 @@ import KonsolidatsiyaPage from "./page/KonsolidatsiyaPage";
 function App() {
   const handleCall = () => {
     if (typeof window.gtag_report_conversion === "function") {
-      window.gtag_report_conversion("tel:77789821945");
+      window.gtag_report_conversion("tel:+77753378595");
     }
   };
   return (
@@ -53,11 +53,11 @@ function App() {
         {...css.call}
         onClick={handleCall}
         target="_blank"
-        href={"tel:+77789821945"}
+        href={"tel:+77753378595"}
       >
         <Image w={"50px"} src={CallIcon} />
       </Link>
-      <Link {...css.link} target="_blank" href="https://wa.me/+77789821945">
+      <Link {...css.link} target="_blank" href="https://wa.me/+77753378595">
         <Whatsapp />
       </Link>
     </>
