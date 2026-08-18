@@ -9,11 +9,11 @@ function Statistic() {
       <Box className="container">
         <SimpleGrid gap={"36px"} columns={{ base: 1, sm: 2, md: 3 }}>
           <Flex align={"center"} flexDirection={"column"}>
-            <Heading {...css.number}>2+</Heading>
+            <Heading {...css.number}>4+</Heading>
             <Text {...css.text}>{t("года на рынке")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>
-            <Heading {...css.number}>1000+</Heading>
+            <Heading {...css.number}>2000+</Heading>
             <Text {...css.text}>{t("тонн ежемесячно")}</Text>
           </Flex>
           <Flex align={"center"} flexDirection={"column"}>

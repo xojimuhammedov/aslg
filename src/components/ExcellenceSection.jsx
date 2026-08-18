@@ -83,7 +83,7 @@ export function ExcellenceSection() {
             {t("Готовы оптимизировать свою логистику с помощью консолидации грузов в Алматы? Выберите CARGO<sup>24</sup> для рационального, экономичного и устойчивого подхода. Свяжитесь с нами сегодня, чтобы обсудить, как наши услуги по консолидации грузов могут принести пользу вашему бизнесу.")}
           </p>
           <a
-            href={"tel:+77789821945"}
+            href={"tel:+77006062024"}
             target="_blank"
             className="mt-5 inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90 sm:text-base"
           >

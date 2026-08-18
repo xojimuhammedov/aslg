@@ -77,9 +77,11 @@ function Footer() {
             <Link
               target="_blank"
               {...css.link}
-              href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
+              href={
+                "https://www.google.com/maps/search/?api=1&query=%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C+%D1%83%D0%BB.+%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%2C+38%2F61"
+              }>
               {t(
-                "Республика Казахстан, г. Алматы, проспект Райымбека, 92"
+                "Республика Казахстан, г. Алматы, ул. Тулебаева, 38/61, каб. 511"
               )}
             </Link>
           </Flex>
@@ -93,7 +95,7 @@ function Footer() {
               <Link target="_blank" href="https://t.me/aslgkz">
                 <Image {...css.icon} src={Telegram} alt="Telegram" />
               </Link>
-              <Link target="_blank" href="https://wa.me/+77789821945">
+              <Link target="_blank" href="https://wa.me/+77006062024">
                 <Image {...css.icon} src={WhatsappIcon} alt="WhatsappIcon" />
               </Link>
             </Flex>

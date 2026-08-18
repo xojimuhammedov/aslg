@@ -53,7 +53,7 @@ function Header() {
       toast.error(t("Iltimos, barcha maydonlarni to‘ldiring!"));
       return;
     }
-    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/s9rpgij39sd276g7/crm.lead.add';
+    const webhookUrl = 'https://aslg.bitrix24.kz/rest/1/29m08x02ir4k3zb3/crm.lead.add';
     const payload = {
       fields: {
         NAME: nameValue, // kerakli bo'lishi mumkin
@@ -92,7 +92,7 @@ function Header() {
             </Heading>
 
             <Heading {...css.name}>
-              {t("Рассчитайте стоимость доставки")}
+              {t("Оставьте заявку прямо сейчас — заберем ваш груз за 30 минут")}
             </Heading>
             <SimpleGrid mt={"15px"} columns={{ base: 1, lg: 2 }} gap={"20px"}>
               <Input

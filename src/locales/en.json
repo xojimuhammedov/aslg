@@ -162,7 +162,7 @@
   "Calculate your shipment": "Calculate your shipment",
   "Ваше сообщение успешно отправлено!": "Your message has been successfully sent!",
   "Iltimos, barcha maydonlarni to‘ldiring!": "Please fill in all fields!",
-  "Республика Казахстан, г. Алматы, проспект Райымбека, 92":"Republic of Kazakhstan, Almaty, Raiymbek Avenue, 92",
+  "Республика Казахстан, г. Алматы, ул. Тулебаева, 38/61, каб. 511":"Republic of Kazakhstan, Almaty, Tulebayeva str., 38/61, office 511",
     "Логистика нового уровня": "Next-level logistics",
     "Надёжная доставка грузов по всему Казахстану": "Reliable cargo delivery across Kazakhstan",
     "Складское хранение": "Warehouse storage",
@@ -190,5 +190,6 @@
     "Грузовые (≥100 кг.) перевозки Европа": "Cargo transportation to Europe (≥100 kg)",
     "Грузовые (≥100 кг.) перевозки Азия": "Cargo transportation to Asia (≥100 kg)",
     "Грузовые (≥100 кг.) перевозки Прибалтика": "Cargo transportation to the Baltics (≥100 kg)",
-    "Консолидация":"Cargo consolidation"
+    "Консолидация":"Cargo consolidation",
+    "Оставьте заявку прямо сейчас — заберем ваш груз за 30 минут":"Submit your request now — we’ll pick up your cargo in 30 minutes"
 }
