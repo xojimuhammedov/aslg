@@ -20,7 +20,7 @@ function Footer() {
   const { t } = useTranslation();
     const handleCall = () => {
       if (typeof window.gtag_report_conversion === "function") {
-        window.gtag_report_conversion("tel:77753378595");
+        window.gtag_report_conversion("tel:+77006062024");
       }
     };
   
@@ -65,8 +65,8 @@ function Footer() {
           </Flex>
           <Flex flexDirection={"column"}>
             <Heading {...css.title}>{t("Contact")}</Heading>
-            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77753378595"}>
-              +7 775 337 85 95
+            <Link {...css.link} target="_blank" onClick={handleCall} href={"tel:+77006062024"}>
+              +7 700 606 20 24
             </Link>
             <Link
               {...css.link}
@@ -89,7 +89,7 @@ function Footer() {
             <Heading {...css.title}>{t("FOLLOW US ON SOCIAL MEDIA")}</Heading>
             <Text {...css.link}>{t("Join Us")}</Text>
             <Flex gap={"12px"}>
-              <Link href="/">
+              <Link target="_blank" href="https://instagram.com/aslg.kz">
                 <Image {...css.icon} src={Instagram} alt="Instagram" />
               </Link>
               <Link target="_blank" href="https://t.me/aslgkz">

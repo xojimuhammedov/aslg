@@ -12,6 +12,9 @@ import LogoEighteen from '../assets/logo-6.jpg'
 import LogoNineteen from '../assets/logo-7.jpg'
 import LogoTwenty from '../assets/logo-8.jpg'
 import LogoTwentyOne from '../assets/logo-9.jpg'
+import LogoTwentyTwo from '../assets/logo-10.png'
+import LogoTwentyThree from '../assets/logo-11.jpg'
+import LogoTwentyFour from '../assets/logo-12.jpg'
 
 function Partner() {
   const { t } = useTranslation();
@@ -86,6 +89,15 @@ function Partner() {
           </Box>
           <Box {...css.item}>
             <Image {...css.icon} src={LogoTwentyOne} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwentyTwo} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwentyThree} />
+          </Box>
+          <Box {...css.item}>
+            <Image {...css.icon} src={LogoTwentyFour} />
           </Box>
         </Slider>
       </Box>
